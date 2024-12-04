@@ -1,5 +1,5 @@
 // Define CO2 emission factors (kg CO2 per km) for different transportation methods
-const distance = 10
+const distance = 100
 const emissionFactors = {
     // Average kg co2 emissions per km
     // Source: https://www.vasttrafik.se/info/statistik/ using the calc for electric buss 30 people and 1 for cars
@@ -10,20 +10,12 @@ const emissionFactors = {
     public_transport: 6, 
 };
 
-// const p = {
-//     on_foot: getPrice("on_foot", distance),
-//     bicycle: getPrice("bicycle", distance),
-//     ICE_car: getPrice("ICE_car", distance),
-//     electric_car: getPrice("electric_car", distance),
-//     public_transport: getPrice("public_transport", distance)
-// };
-
 const p = {
-    on_foot: 0,
-    bicycle: 0,
-    ICE_car: 1000,
-    electric_car: 100,
-    public_transport: 0
+    on_foot: getPrice("on_foot", distance),
+    bicycle: getPrice("bicycle", distance),
+    ICE_car: getPrice("ICE_car", distance),
+    electric_car: getPrice("electric_car", distance),
+    public_transport: getPrice("public_transport", distance)
 };
 
 var startingPoint;
@@ -110,6 +102,7 @@ function calculatePrice(key, data, passengers) {
 
 function get_CO2_emissions(key, emissionFactors, passengers, distance) {
     let transportation_method = key
+    console.log("transportation_method ", emissionFactors[transportation_method])
     // Get the emission factor for the given transportation method
     const factor = emissionFactors[transportation_method];
 
@@ -119,29 +112,31 @@ function get_CO2_emissions(key, emissionFactors, passengers, distance) {
     }
 
     // Calculate CO2 emissions
-    const emissions = factor * distance * passengers;
+    const emissions = (factor * distance) / passengers;
 
     return emissions; // Return the calculated emissions
 }
 
-// Variables I dont have
-const ElectricityPrice = 2.5;  // Price per kWh (kr)
 
-// Variables
-const FuelPrice = 15; // Fuel price per liter (kr)
-const FuelConsumption = 8; // Liters per 100 km 
-const electricityConsumption = 10; // kWh per 100 km
 
 // Price calculation function
 function getPrice(transportationMethod, distance) {
+    // Variables I dont have
+    const ElectricityPrice = 2.5;  // Price per kWh (kr)
+
+    // Variables
+    const FuelPrice = 17; // Fuel price per liter (kr)
+    const FuelConsumption = 8; // Liters per 100 km 
+    const electricityConsumption = 10; // kWh per 100 km
 
     switch (transportationMethod) {
         case "ICE_car":
+            console.log((FuelConsumption / 100) * distance * FuelPrice);
             return (FuelConsumption / 100) * distance * FuelPrice;
         case "electric_car":
             return (electricityConsumption / 100) * distance * ElectricityPrice;
         case "public_transport":
-            return 36; 
+            return 36;
         case "bicycle":
         case "on_foot":
             return 0;
