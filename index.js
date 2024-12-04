@@ -11,11 +11,11 @@ const emissionFactors = {
 };
 
 const p = {
-    on_foot: 0,
-    bicycle: 0,
-    ICE_car: 100,
-    electric_car: 100,
-    public_transport: 100
+    on_foot: getPrice(on_foot, distance),
+    bicycle: getPrice(bicycle, distance),
+    ICE_car: getPrice(ICE_car, distance),
+    electric_car: getPrice(electric_car, distance),
+    public_transport: getPrice(public_transport, distance)
 };
 
 var startingPoint;
@@ -80,7 +80,7 @@ function capitalizeWords(sentence) {
         .join(" "); // Join the words back into a sentence
 }
 
-function getPrice(key, data, passengers) {
+function calculatePrice(key, data, passengers) {
     switch (key) {
         case "on_foot":
         case "bicycle":
@@ -125,17 +125,17 @@ const FuelConsumption = 8; // Liters per 100 km
 const electricityConsumption = 10; // kWh per 100 km
 
 // Price calculation function
-const getPrice1 = (transportationMethod, distance) => {
+function getPrice (transportationMethod, distance) {
 
     switch (transportationMethod.toLowerCase()) {
-        case 'fosil_car':
+        case 'ICE_car':
             return (FuelConsumption / 100) * distance * FuelPrice;
         case 'electric_car':
             return (electricityConsumption / 100) * distance * ElectricityPrice;
-        case 'publictransport':
+        case 'public_transport':
             return 36; 
         case 'bicycle':
-        case 'walk':
+        case 'on_foot':
             return 0;
         default:
             throw new Error(`Invalid transportation method: ${transportationMethod}`);
