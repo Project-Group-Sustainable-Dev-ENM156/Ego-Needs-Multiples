@@ -110,3 +110,11 @@ span.subtitle {
 .search-button:focus {
   outline: 2px solid #4E5166;
 }
+
+/* Checkbox */
+.passenger-checkbox {
+  width: 35px;
+  height: 35px;
+  border: 0.5px solid #ccc;
+  accent-color: #F25757;
+}
