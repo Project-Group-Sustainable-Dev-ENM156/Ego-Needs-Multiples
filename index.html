@@ -8,21 +8,13 @@
 </head>
 <body>
     <div class="container">
-        <h2>Trip Advisor</h2>
+        <h2>Trip Advisor (But it's sustainable)</h2>
         <form id="tripForm">
             <label for="startingPoint">Starting Point:</label>
             <input type="text" id="startingPoint" name="startingPoint" placeholder="Enter your starting point" required>
 
             <label for="destination">Destination:</label>
             <input type="text" id="destination" name="destination" placeholder="Enter your destination" required>
-
-            <label for="transportation">Means of Transportation:</label>
-            <select id="transportation" name="transportation" required>
-                <option value="" disabled selected>Select transportation</option>
-                <option value="car">Car</option>
-                <option value="bus">Bus</option>
-                <option value="bicycle">Bicycle</option>
-            </select>
 
             <label for="passengers">Number of Passengers:</label>
             <input type="number" id="passengers" name="passengers" min="1" placeholder="Enter the number of passengers" required>
@@ -44,13 +36,19 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Car</td>
-                        <td id="car-emissions">-</td>
-                        <td id="car-price">-</td>
-                        <td id="car-time">-</td>
+                        <td>Car (Electric)</td>
+                        <td id="car-electric-emissions">-</td>
+                        <td id="car-electric-price">-</td>
+                        <td id="car-electric-time">-</td>
                     </tr>
                     <tr>
-                        <td>Bus</td>
+                        <td>Car (Fossil Fuel)</td>
+                        <td id="car-fossil-emissions">-</td>
+                        <td id="car-fossil-price">-</td>
+                        <td id="car-fossil-time">-</td>
+                    </tr>
+                    <tr>
+                        <td>Public Transport</td>
                         <td id="bus-emissions">-</td>
                         <td id="bus-price">-</td>
                         <td id="bus-time">-</td>
@@ -60,6 +58,12 @@
                         <td id="bicycle-emissions">-</td>
                         <td id="bicycle-price">-</td>
                         <td id="bicycle-time">-</td>
+                    </tr>
+                    <tr>
+                        <td>On Foot</td>
+                        <td id="on-foot-emissions">-</td>
+                        <td id="on-foot-price">-</td>
+                        <td id="on-foot-time">-</td>
                     </tr>
                 </tbody>
             </table>
