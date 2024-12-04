@@ -1,32 +1,76 @@
+<!----------------------------------------------------------------->
+<!--                                                             -->
+<!-- Utökad Reseplanerare                                     -->
+<!--                                                             -->
+<!----------------------------------------------------------------->
+
+<!-- Authors: Simon Andersson, Knut Grunewald, Erik Gälldin, Oscar Lindfors -->
+<!--            Daniel Olausson, William Sevelin Nordenmark, David Spaberg  -->
+
+
 <!DOCTYPE html>
-<html lang="en">
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trip Advisor</title>
-    <link rel="stylesheet" href="index.css">    
-</head>
-<body>
-    <div class="container">
-        <h2>Trip Advisor (But it's sustainable)</h2>
-        <form id="tripForm">
-            <label for="startingPoint">Starting Point:</label>
-            <input type="text" id="startingPoint" name="startingPoint" placeholder="Enter your starting point" required>
+<html lang="sv">
 
-            <label for="destination">Destination:</label>
-            <input type="text" id="destination" name="destination" placeholder="Enter your destination" required>
+  <!----------------------------------------------------------------->
+  <!--                                                             -->
+  <!-- Head                                                        -->
+  <!--                                                             -->
+  <!----------------------------------------------------------------->
 
-            <label for="passengers">Number of Passengers:</label>
-            <input type="number" id="passengers" name="passengers" min="1" placeholder="Enter the number of passengers" required>
-
-            <div class="checkbox-container">
-                <label for="ticket">Jag har en periodbiljett</label>
-                <input type="checkbox" id="ticket" name="ticket">
-            </div>            
-            
-            <button type="submit">Search</button>
-        </form>
+  <head> 
+  
+    <!-- Descriptive Information -->
+    <meta name="authors" content="Simon Andersson, Knut Grunewald, Erik Gälldin, Oscar Lindfors, Daniel Olausson, William Sevelin Nordenmark, David Spaberg" />
+    <meta name="description" content="Reckoner that Estimates The Environmental Effect of Endless Transportation Options in Gothenburg and Environs."
+  
+    <!-- Title and Icon -->
+    <title>Utökad Reseplanerare</title>
+    <link rel="icon" href="icon.png" type="image/icon type">
+  
+    <!-- Linked Files -->
+    <link rel="stylesheet" href="main.css">
+  
+    <!-- Page Settinga -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#FFFFFF" />
+    <meta name="color-scheme" content="normal" />
+    <meta name="robots" content="index, follow" />
+    <meta name="referrer" content="no-referrer" />  
+    
+  </head>
+  
+  <!----------------------------------------------------------------->
+  <!--                                                             -->
+  <!-- Body                                                        -->
+  <!--                                                             -->
+  <!----------------------------------------------------------------->
+  
+  <body>
+  
+    <div class="background-image" style="background-image:url(background.jpg)"></div>
+  
+    <article>
+  
+      <div class="container">
+    
+          <span class="subtitle" style="margin-top:64px;"> ChalmersProjekt </span>
+          <h1>Utökad Reseplanerare</h1>
+    
+          <form id="tripForm">
+    
+          <span class="subtitle">Från </span>
+          <input type="text" class="input-text" id="fromDestination" placeholder="" required\>
         
+          <span class="subtitle">Till </span>
+          <input type="text" class="input-text" id="toDestination" placeholder="" required\>
+        
+          <span class="subtitle">Antal passagerare </span>
+          <input type="number" class="input-text" id="passengerCount" min="1" placeholder="" required\>
+        
+          <input type="button" class="search-button" value="Sök resa"\>
+      
+        </form>
 
         <!-- Hidden Table -->
         <div id="results" class="hidden">
@@ -74,8 +118,12 @@
                 </tbody>
             </table>
         </div>
-    </div>
+      </div>
 
-    <script src="index.js"></script>
-</body>
+      <script src="index.js"></script>
+    
+    </article>
+    
+  </body>
+  
 </html>

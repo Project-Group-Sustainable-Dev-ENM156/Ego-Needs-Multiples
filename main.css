@@ -1,0 +1,112 @@
+/* General settings for the box that contains everything. */
+article{
+  margin: 80px auto 80px auto;
+  width: 860px;
+  background-color: #FFFFFF;
+  border: 1px solid #413956;
+  box-shadow: 10px 10px 0px 4px rgba(65, 57, 86, 0.8);
+}
+.background-image{
+    position:fixed;
+    top:-160px; bottom:0; left:0; right:0;
+    background-size:cover;
+    background-position: top left;
+    background-image:url(konst.JPG);
+    z-index:-2;
+    background-attachment:scroll, local;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+}
+.box {
+  background-color: #FFFFFF;
+}
+.container {
+  width: 668px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+.container--text {
+  max-width: 668px;
+}
+
+/* Largest Header. */
+h1 {
+  background-color: #413956;
+  color: #FFFFFF;
+  display: inline-block;
+  font-family: league gothic,sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 64px 0 0px;
+  margin-top: 0px;
+  text-wrap: nowrap;
+  padding: 4px;
+}
+
+/* Subtitle to h1 header. */
+span.subtitle {
+  font-family: ibm plex sans condensed,noto display light,sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-top: 24px;
+  height: 22px;
+  color: #413956;
+}
+
+/* Input box where the end point or start point is inputted. */
+.input-text {
+  width: 100%;
+  padding: 16px 20px 12px 20px;
+  margin: 0px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: ibm plex sans condensed,noto display light,sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  background-color:#FFFFFF;
+  color: #413956;
+}
+.input-text:hover {
+  background-color: #EAEAEA;
+  transition: 0.2s;
+}
+.input-text:focus{
+  outline: 2px solid #4E5166;
+}
+
+/* Button to initiate the search. */
+.search-button {
+  width: 100%;
+  padding: 16px 20px 16px 20px;
+  margin: 24px 0 0 0;
+  border: 0px solid #ccc;
+  font-family: ibm plex sans condensed,noto display light,sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  background-color: #F25757;
+  color: #F4EDED;
+  text-transform: uppercase;
+}
+.search-button:hover {
+  background-color: #AD002D;
+  transition: 0.2s;
+}
+.search-button:active {
+  background-color: #740A00;
+  transition: 0.2s;
+}
+.search-button:focus {
+  outline: 2px solid #4E5166;
+}
