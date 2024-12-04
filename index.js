@@ -7,13 +7,15 @@ document.getElementById('tripForm').addEventListener('submit', function(event) {
     const destination = document.getElementById('destination').value;
     const passengers = document.getElementById('passengers').value;
 
+    const distance = 10;
+
     // Example data for demonstration
     const data = {
-        car_electric: { emissions: "120 g/km", price: "$50", time: "2 hours" },
-        car_fossil: { emissions: "120 g/km", price: "$50", time: "2 hours" },
-        bus: { emissions: "30 g/km", price: "$10", time: "3 hours" },
-        bicycle: { emissions: "0 g/km", price: "$0", time: "4 hours" },
-        on_foot: { emissions: "0 g/km", price: 0, time: "4 hours" }
+        car_electric: { emissions: get_CO2_emissions("electric_car", distance), price: "$50", time: "2 hours" },
+        car_fossil: { emissions: get_CO2_emissions("fosil_car", distance), price: "$50", time: "2 hours" },
+        bus: { emissions: get_CO2_emissions("bus", distance), price: "$10", time: "3 hours" },
+        bicycle: { emissions: get_CO2_emissions("bicycle", distance), price: "$0", time: "4 hours" },
+        on_foot: { emissions: get_CO2_emissions("walk", distance), price: 0, time: "4 hours" }
     };
 
     // Update table with data
