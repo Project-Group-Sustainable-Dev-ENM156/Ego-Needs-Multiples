@@ -115,3 +115,29 @@ function get_CO2_emissions(key, emissionFactors, passengers, distance) {
 
     return emissions; // Return the calculated emissions
 }
+
+// Variables I dont have
+const ElectricityPrice = 2.5;  // Price per kWh (kr)
+
+// Variables
+const FuelPrice = 15; // Fuel price per liter (kr)
+const FuelConsumption = 8; // Liters per 100 km 
+const electricityConsumption = 10; // kWh per 100 km
+
+// Price calculation function
+const getPrice1 = (transportationMethod, distance) => {
+
+    switch (transportationMethod.toLowerCase()) {
+        case 'fosil_car':
+            return (FuelConsumption / 100) * distance * FuelPrice;
+        case 'electric_car':
+            return (electricityConsumption / 100) * distance * ElectricityPrice;
+        case 'publictransport':
+            return 36; 
+        case 'bicycle':
+        case 'walk':
+            return 0;
+        default:
+            throw new Error(`Invalid transportation method: ${transportationMethod}`);
+    }
+};
