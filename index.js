@@ -31,3 +31,32 @@ document.getElementById('tripForm').addEventListener('submit', function(event) {
     // Show the results table
     document.getElementById('results').classList.remove('hidden');
 });
+
+function get_CO2_emissions(transportation_method, distance) {
+    // Define CO2 emission factors (kg CO2 per km) for different transportation methods
+    const emissionFactors = {
+        // Average kg co2 emissions per km
+        // Source: https://www.vasttrafik.se/info/statistik/ using the calc for electric buss 30 people and 1 for cars
+        bus: 6, 
+        fosil_car: 182, // Alternative source for cars (not used): https://www.transportstyrelsen.se/sv/om-oss/statistik-och-analys/statistik-inom-vagtrafik/statistik-over-koldioxidutslapp/statistik-over-koldioxidutslapp-2021/
+        electric_car: 58, 
+        bicycle: 0,
+        walk: 0
+    };
+
+    // Get the emission factor for the given transportation method
+    const factor = emissionFactors[transportation_method.toLowerCase()];
+
+    // If the transportation method is invalid, throw an error
+      if (factor === undefined) {
+        throw new Error(`Invalid transportation method: ${transportation_method}`);
+    }
+
+    // Calculate CO2 emissions
+    const emissions = factor * distance;
+
+    return emissions; // Return the calculated emissions
+}
+
+
+
