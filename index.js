@@ -30,7 +30,6 @@ document.getElementById('tripForm').addEventListener('submit', function(event) {
     // Get user input
     startingPoint = document.getElementById('startingPoint').value;
     destination = document.getElementById('destination').value;
-    transportation = document.getElementById('transportation').value;
     passengers = document.getElementById('passengers').value;
 
     createTable()
