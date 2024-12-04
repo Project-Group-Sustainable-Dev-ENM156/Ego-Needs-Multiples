@@ -5,7 +5,6 @@ document.getElementById('tripForm').addEventListener('submit', function(event) {
     // Get user input
     const startingPoint = document.getElementById('startingPoint').value;
     const destination = document.getElementById('destination').value;
-    //const transportation = document.getElementById('transportation').value;
     const passengers = document.getElementById('passengers').value;
 
     // Example data for demonstration
@@ -14,7 +13,7 @@ document.getElementById('tripForm').addEventListener('submit', function(event) {
         car_fossil: { emissions: "120 g/km", price: "$50", time: "2 hours" },
         bus: { emissions: "30 g/km", price: "$10", time: "3 hours" },
         bicycle: { emissions: "0 g/km", price: "$0", time: "4 hours" },
-        on_foot: { emissions: "0 g/km", price: "$0", time: "4 hours" }
+        on_foot: { emissions: "0 g/km", price: 0, time: "4 hours" }
     };
 
     // Update table with data
@@ -35,7 +34,7 @@ document.getElementById('tripForm').addEventListener('submit', function(event) {
     document.getElementById('bicycle-time').textContent = data.bicycle.time;
 
     document.getElementById('on-foot-emissions').textContent = data.on_foot.emissions;
-    document.getElementById('on-foot-price').textContent = data.on_foot.price;
+    document.getElementById('on-foot-price').textContent = "$" + data.on_foot.price;
     document.getElementById('on-foot-time').textContent = data.on_foot.time;
 
     // Show the results table
