@@ -4,10 +4,12 @@ document.getElementById('tripForm').addEventListener('submit', function(event) {
 
     // Get user input
     const startingPoint = document.getElementById('startingPoint').value;
+    console.log(startingPoint)
     const destination = document.getElementById('destination').value;
+    console.log(destination)
     const passengers = document.getElementById('passengers').value;
-
-    const distance = 10;
+    const has_period_ticket = document.getElementById('ticket').checked;    // Use this for ticket price calculation. True if the user has a period ticket.
+    const distance = 10;    // Magic number for now but should be replaced by västtrafiken API
 
     // Example data for demonstration
     const data = {

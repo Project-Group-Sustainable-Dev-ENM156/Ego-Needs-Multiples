@@ -20,7 +20,7 @@ label {
 }
 
 /* Ensure consistency in width and include padding and borders in total width */
-input, select, button {
+input, select, button, checkbox {
     width: 100%; /* Set fixed width */
     padding: 8px;
     margin-bottom: 15px;
@@ -39,6 +39,26 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure space distribution */
+    margin-bottom: 10px;
+}
+
+.checkbox-container label {
+    flex: 1; /* Let the label take up available space */
+    margin-right: 41px; /* Small space between text and checkbox */
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text wrapping to the next line */
+}
+
+.checkbox-container input[type="checkbox"] {
+    flex-shrink: 0; /* Prevent checkbox from shrinking */
+    margin: 0; /* Remove extra margins */
+}
+
 
 table {
     width: 100%;
