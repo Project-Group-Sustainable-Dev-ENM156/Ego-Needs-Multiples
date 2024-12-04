@@ -83,7 +83,7 @@ function capitalizeWords(sentence) {
 function getPrice(key, data, passengers) {
     switch (key) {
         case "on_foot":
-        case "bike":
+        case "bicycle":
             return data[key];
         case "ICE_car":
         case "electric_car":
