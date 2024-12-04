@@ -1,73 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trip Advisor</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 400px;
-            margin: auto;
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        /* Ensure consistency in width and include padding and borders in total width */
-        input, select, button {
-            width: 100%; /* Set fixed width */
-            padding: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box; /* Include padding and border in width */
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-    </style>
+    <link rel="stylesheet" href="index.css">    
 </head>
 <body>
     <div class="container">
@@ -129,40 +66,6 @@
         </div>
     </div>
 
-    <script>
-        // Event Listener for Form Submission
-        document.getElementById('tripForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent actual form submission
-
-            // Get user input
-            const startingPoint = document.getElementById('startingPoint').value;
-            const destination = document.getElementById('destination').value;
-            const transportation = document.getElementById('transportation').value;
-            const passengers = document.getElementById('passengers').value;
-
-            // Example data for demonstration
-            const data = {
-                car: { emissions: "120 g/km", price: "$50", time: "2 hours" },
-                bus: { emissions: "30 g/km", price: "$10", time: "3 hours" },
-                bicycle: { emissions: "0 g/km", price: "$0", time: "4 hours" }
-            };
-
-            // Update table with data
-            document.getElementById('car-emissions').textContent = data.car.emissions;
-            document.getElementById('car-price').textContent = data.car.price;
-            document.getElementById('car-time').textContent = data.car.time;
-
-            document.getElementById('bus-emissions').textContent = data.bus.emissions;
-            document.getElementById('bus-price').textContent = data.bus.price;
-            document.getElementById('bus-time').textContent = data.bus.time;
-
-            document.getElementById('bicycle-emissions').textContent = data.bicycle.emissions;
-            document.getElementById('bicycle-price').textContent = data.bicycle.price;
-            document.getElementById('bicycle-time').textContent = data.bicycle.time;
-
-            // Show the results table
-            document.getElementById('results').classList.remove('hidden');
-        });
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
