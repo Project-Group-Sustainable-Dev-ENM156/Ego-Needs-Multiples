@@ -1,33 +1,118 @@
+// Define CO2 emission factors (kg CO2 per km) for different transportation methods
+const distance = 10
+const emissionFactors = {
+    // Average kg co2 emissions per km
+    // Source: https://www.vasttrafik.se/info/statistik/ using the calc for electric buss 30 people and 1 for cars
+    on_foot: 0,
+    bicycle: 0,
+    ICE_car: 182, // Alternative source for cars (not used): https://www.transportstyrelsen.se/sv/om-oss/statistik-och-analys/statistik-inom-vagtrafik/statistik-over-koldioxidutslapp/statistik-over-koldioxidutslapp-2021/
+    electric_car: 58, 
+    public_transport: 6, 
+};
+
+const p = {
+    on_foot: 0,
+    bicycle: 0,
+    ICE_car: 100,
+    electric_car: 100,
+    public_transport: 100
+};
+
+var startingPoint;
+var destination;
+var startingPoint;
+var startingPoint;
+
 // Event Listener for Form Submission
 document.getElementById('tripForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent actual form submission
 
     // Get user input
-    const startingPoint = document.getElementById('startingPoint').value;
-    const destination = document.getElementById('destination').value;
-    const transportation = document.getElementById('transportation').value;
-    const passengers = document.getElementById('passengers').value;
+    startingPoint = document.getElementById('startingPoint').value;
+    destination = document.getElementById('destination').value;
+    transportation = document.getElementById('transportation').value;
+    passengers = document.getElementById('passengers').value;
 
-    // Example data for demonstration
-    const data = {
-        car: { emissions: "120 g/km", price: "$50", time: "2 hours" },
-        bus: { emissions: "30 g/km", price: "$10", time: "3 hours" },
-        bicycle: { emissions: "0 g/km", price: "$0", time: "4 hours" }
-    };
-
-    // Update table with data
-    document.getElementById('car-emissions').textContent = data.car.emissions;
-    document.getElementById('car-price').textContent = data.car.price;
-    document.getElementById('car-time').textContent = data.car.time;
-
-    document.getElementById('bus-emissions').textContent = data.bus.emissions;
-    document.getElementById('bus-price').textContent = data.bus.price;
-    document.getElementById('bus-time').textContent = data.bus.time;
-
-    document.getElementById('bicycle-emissions').textContent = data.bicycle.emissions;
-    document.getElementById('bicycle-price').textContent = data.bicycle.price;
-    document.getElementById('bicycle-time').textContent = data.bicycle.time;
-
-    // Show the results table
-    document.getElementById('results').classList.remove('hidden');
+    createTable()
 });
+
+function createTable() {
+    let data = {}
+    Object.keys(p).forEach(k => {
+        data[k] = {
+            emissions: get_CO2_emissions(k, emissionFactors, passengers, distance), 
+            price: getPrice(k, p, passengers), 
+            time: null
+        }
+    })
+
+    let list = document.getElementById("tbod")
+    while (list.children.length >= 1) {
+        list.removeChild(list.lastChild); // Remove rows except the first one
+    }
+
+    Object.entries(data).forEach(([key, value]) => {
+        let row = document.createElement("tr");
+        
+        // Create a cell for the key
+        let keyName = document.createElement("td");
+        keyName.textContent = capitalizeWords(key.replace("_", " ")); // Set the key as the cell content
+        row.appendChild(keyName);
+        
+        // Create cells for emissions, price, and time
+        ["emissions", "price", "time"].forEach(elem => {
+            let cell = document.createElement("td");
+            cell.textContent = value[elem]; // Use the value of the property
+            cell.setAttribute("id", key + "_" + elem); // Set an ID for the cell
+            cell.setAttribute("class", elem); // Set an Class for the cell
+            row.appendChild(cell);
+        });
+
+        document.getElementById("tbod").appendChild(row);
+    });
+
+    document.getElementById('results').classList.remove('hidden');
+}
+
+function capitalizeWords(sentence) {
+    return sentence
+        .split(" ") // Split the sentence into words
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize the first letter of each word
+        .join(" "); // Join the words back into a sentence
+}
+
+function getPrice(key, data, passengers) {
+    switch (key) {
+        case "on_foot":
+        case "bike":
+            return data[key];
+        case "ICE_car":
+        case "electric_car":
+            const carsRequired = Math.ceil(passengers / 5);
+            const totalPrice = carsRequired * data[key];
+            return Math.round(totalPrice / passengers);
+        case "public_transport":
+            return null;
+            break;
+        default:
+            return null;
+    }
+}
+
+
+
+function get_CO2_emissions(key, emissionFactors, passengers, distance) {
+    let transportation_method = key
+    // Get the emission factor for the given transportation method
+    const factor = emissionFactors[transportation_method];
+
+    // If the transportation method is invalid, throw an error
+      if (factor === undefined) {
+        throw new Error(`Invalid transportation method: ${transportation_method}`);
+    }
+
+    // Calculate CO2 emissions
+    const emissions = factor * distance * passengers;
+
+    return emissions; // Return the calculated emissions
+}
