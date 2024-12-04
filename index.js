@@ -10,12 +10,20 @@ const emissionFactors = {
     public_transport: 6, 
 };
 
+// const p = {
+//     on_foot: getPrice("on_foot", distance),
+//     bicycle: getPrice("bicycle", distance),
+//     ICE_car: getPrice("ICE_car", distance),
+//     electric_car: getPrice("electric_car", distance),
+//     public_transport: getPrice("public_transport", distance)
+// };
+
 const p = {
-    on_foot: getPrice(on_foot, distance),
-    bicycle: getPrice(bicycle, distance),
-    ICE_car: getPrice(ICE_car, distance),
-    electric_car: getPrice(electric_car, distance),
-    public_transport: getPrice(public_transport, distance)
+    on_foot: 0,
+    bicycle: 0,
+    ICE_car: 1000,
+    electric_car: 100,
+    public_transport: 0
 };
 
 var startingPoint;
@@ -24,13 +32,13 @@ var startingPoint;
 var startingPoint;
 
 // Event Listener for Form Submission
-document.getElementById('tripForm').addEventListener('submit', function(event) {
+document.getElementById('search-button').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent actual form submission
 
     // Get user input
-    startingPoint = document.getElementById('startingPoint').value;
-    destination = document.getElementById('destination').value;
-    passengers = document.getElementById('passengers').value;
+    startingPoint = document.getElementById('fromDestination').value;
+    destination = document.getElementById('toDestination').value;
+    passengers = document.getElementById('passengerCount').value;
 
     createTable()
 });
@@ -40,7 +48,7 @@ function createTable() {
     Object.keys(p).forEach(k => {
         data[k] = {
             emissions: get_CO2_emissions(k, emissionFactors, passengers, distance), 
-            price: getPrice(k, p, passengers), 
+            price: calculatePrice(k, p, passengers), 
             time: null
         }
     })
@@ -125,17 +133,17 @@ const FuelConsumption = 8; // Liters per 100 km
 const electricityConsumption = 10; // kWh per 100 km
 
 // Price calculation function
-function getPrice (transportationMethod, distance) {
+function getPrice(transportationMethod, distance) {
 
-    switch (transportationMethod.toLowerCase()) {
-        case 'ICE_car':
+    switch (transportationMethod) {
+        case "ICE_car":
             return (FuelConsumption / 100) * distance * FuelPrice;
-        case 'electric_car':
+        case "electric_car":
             return (electricityConsumption / 100) * distance * ElectricityPrice;
-        case 'public_transport':
+        case "public_transport":
             return 36; 
-        case 'bicycle':
-        case 'on_foot':
+        case "bicycle":
+        case "on_foot":
             return 0;
         default:
             throw new Error(`Invalid transportation method: ${transportationMethod}`);

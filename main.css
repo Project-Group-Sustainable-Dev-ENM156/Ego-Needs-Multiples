@@ -86,7 +86,7 @@ span.subtitle {
 }
 
 /* Button to initiate the search. */
-.search-button {
+#search-button {
   width: 100%;
   padding: 16px 20px 16px 20px;
   margin: 24px 0 0 0;
@@ -117,4 +117,8 @@ span.subtitle {
   height: 35px;
   border: 0.5px solid #ccc;
   accent-color: #F25757;
+}
+
+.hidden {
+  display: none;
 }
