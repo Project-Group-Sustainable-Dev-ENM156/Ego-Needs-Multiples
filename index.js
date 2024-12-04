@@ -113,7 +113,7 @@ function get_CO2_emissions(key, emissionFactors, passengers, distance) {
     // Calculate CO2 emissions
     const emissions = (factor * distance) / passengers;
 
-    return emissions; // Return the calculated emissions
+    return Math.round(emissions); // Return the calculated emissions
 }
 
 
