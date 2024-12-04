@@ -102,7 +102,6 @@ function calculatePrice(key, data, passengers) {
 
 function get_CO2_emissions(key, emissionFactors, passengers, distance) {
     let transportation_method = key
-    console.log("transportation_method ", emissionFactors[transportation_method])
     // Get the emission factor for the given transportation method
     const factor = emissionFactors[transportation_method];
 
@@ -131,7 +130,6 @@ function getPrice(transportationMethod, distance) {
 
     switch (transportationMethod) {
         case "ICE_car":
-            console.log((FuelConsumption / 100) * distance * FuelPrice);
             return (FuelConsumption / 100) * distance * FuelPrice;
         case "electric_car":
             return (electricityConsumption / 100) * distance * ElectricityPrice;
