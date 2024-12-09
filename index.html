@@ -51,27 +51,31 @@
   
     <article>
   
-      <div class="container">
+    <div class="container">
+        <span class="subtitle" style="margin-top:64px;"> ChalmersProjekt </span>
+        <h1>Utökad Reseplanerare</h1>
     
-          <span class="subtitle" style="margin-top:64px;"> ChalmersProjekt </span>
-          <h1>Utökad Reseplanerare</h1>
+        <form id="tripForm">
+            <span class="subtitle">Från </span>
+            <input type="text" class="input-text" id="fromDestination" placeholder="" required\>
     
-          <form id="tripForm">
+            <span class="subtitle">Till </span>
+            <input type="text" class="input-text" id="toDestination" placeholder="" required\>
     
-          <span class="subtitle">Från </span>
-          <input type="text" class="input-text" id="fromDestination" placeholder="" required\>
-        
-          <span class="subtitle">Till </span>
-          <input type="text" class="input-text" id="toDestination" placeholder="" required\>
-        
-          <span class="subtitle">Antal passagerare </span>
-          <input type="number" class="input-text" id="passengerCount" min="1" placeholder="" required\>
-        
-          <span class="subtitle">Periodbiljett? </span>
-          <input type="checkbox" class="passenger-checkbox"\>
-        
-          <input type="button" id="search-button" value="Sök resa"\>
-      
+            <span class="subtitle">Antal passagerare </span>
+            <input type="number" class="input-text" id="passengerCount" value="1" required\>
+
+            <div id="more-options">
+                <input type="radio" class="ticket-option" name="ticket_type" value="pb" checked="checked">
+                <label for="pb">Periodbiljett</label><br>
+                
+                <input type="radio" class="ticket-option" name="ticket_type" value="sb">
+                <label for="sb">Enkelbiljet</label><br>
+                
+                <input type="radio" class="ticket-option" name="ticket_type" value="pl">
+                <label for="pl">Planka</label><br>
+            </div>
+            <input type="button" id="search-button" value="Sök resa" \>
         </form>
 
         <!-- Hidden Table -->

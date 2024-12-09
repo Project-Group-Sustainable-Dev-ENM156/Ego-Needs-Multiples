@@ -135,6 +135,22 @@ table {
 }
 
 th, td {
-  border: 1px solid;
+  border: 1.5px solid #ccc;
   text-align: center; 
+  color: #413956;
+  font-family: ibm plex sans condensed,noto display light,sans-serif;
+
+}
+
+#more-options {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.ticket-option {
+  font-family: ibm plex sans condensed,noto display light,sans-serif;
+  font-size: 18px;
+  color: #413956;
 }
