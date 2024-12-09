@@ -122,3 +122,19 @@ span.subtitle {
 .hidden {
   display: none;
 }
+
+#results {
+  margin-top: 30px;
+}
+
+table {
+  margin: auto;
+  width: 100%;
+  border-collapse: collapse;  
+  font-size: x-large;
+}
+
+th, td {
+  border: 1px solid;
+  text-align: center; 
+}
