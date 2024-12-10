@@ -25,7 +25,7 @@ var startingPoint;
 
 // Event Listener for Form Submission
 document.getElementById('search-button').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent actual form submission
+    //event.preventDefault(); // Prevent actual form submission
 
     // Get user input
     startingPoint = document.getElementById('fromDestination').value;
@@ -33,6 +33,32 @@ document.getElementById('search-button').addEventListener('click', function(even
     passengers = document.getElementById('passengerCount').value;
     date = document.getElementById('tripDate').value;
     time = document.getElementById('tripTime').value;
+
+    // Create an object to send
+    const tripData = {
+        startingPoint,
+        destination,
+        passengers,
+        date,
+        time
+    };
+
+    // Send a POST request to the Flask backend
+    fetch('/submit-trip', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(tripData) // Convert data to JSON
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Response from backend, ', data);
+        // Handle the response from the server here
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 
     createTable()
 });
