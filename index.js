@@ -133,7 +133,7 @@ async function getPrice(transportationMethod, distance) {
         case "ICE_car":
             return (FuelConsumption / 100) * distance * FuelPrice;
         case "electric_car":
-            return await elektroShock(distance);
+            return await elektroShock(distance, 0);
         case "public_transport":
             return 36;
         case "bicycle":
@@ -178,7 +178,7 @@ async function fetchElectricityData() {
     }
 }
 
-async function calculateCostForDistance(km) {
+async function calculateCostForDistance(km, mode) {
     if (!electricityData) {
         throw new Error("Electricity price data has not been loaded yet.");
     }
@@ -186,6 +186,8 @@ async function calculateCostForDistance(km) {
     const power = 6; // kW
     const electricityPerKm = 0.2; // kWh/km
     const electricityConsumed = electricityPerKm * km; // Total kWh required
+    const chargeStationPrice = 5.5 // per kWh
+    const stationCost = electricityConsumed * chargeStationPrice
 
     // Map and prepare price intervals from electricity data
     const prices = electricityData.map(entry => ({
@@ -219,10 +221,15 @@ async function calculateCostForDistance(km) {
         remainingConsumption -= consumedInInterval;
     }
 
-    return Math.round(totalPrice * 100) / 100; // Return the total price, rounded to 2 decimal places
+    console.log(mode)
+    if (mode == 0) {
+        return Math.round(totalPrice * 100) / 100; // Return the total price, rounded to 2 decimal places
+    } else {
+        return Math.round(stationCost * 100) / 100;
+    }
 }
 
-async function elektroShock(km) {
+async function elektroShock(km, mode) {
     try {
         if (isNaN(km) || km <= 0) {
             throw new Error("Please enter a valid positive distance.");
@@ -235,8 +242,7 @@ async function elektroShock(km) {
                 await new Promise(resolve => setTimeout(resolve, 50)); // Wait in 50ms intervals
             }
         }
-
-        return calculateCostForDistance(km);
+        return calculateCostForDistance(km, mode);
     } catch (error) {
         console.error("Error calculating cost:", error.message);
         throw error;
