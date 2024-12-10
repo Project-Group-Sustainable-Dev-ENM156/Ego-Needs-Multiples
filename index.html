@@ -67,14 +67,21 @@
 
             <div id="more-options">
                 <input type="radio" class="ticket-option" name="ticket_type" value="pb" checked="checked">
-                <label for="pb">Periodbiljett</label><br>
+                <label for="pb" class="sm-subtitle">Periodbiljett</label><br>
                 
                 <input type="radio" class="ticket-option" name="ticket_type" value="sb">
-                <label for="sb">Enkelbiljet</label><br>
+                <label for="sb" class="sm-subtitle">Enkelbiljett</label><br>
                 
                 <input type="radio" class="ticket-option" name="ticket_type" value="pl">
-                <label for="pl">Planka</label><br>
+                <label for="pl" class="sm-subtitle">Planka</label><br>
             </div>
+
+            <!-- Add Date and Time Picker Here -->
+            <label for="tripDate" class="subtitle">Datum:</label>
+            <input type="date" id="tripDate" class="input-text" name="tripDate" required><br>
+            <label for="tripTime" class="subtitle">Tid:</label>
+            <input type="time" id="tripTime" class="input-text" name="tripTime" required><br><br>
+            
             <input type="button" id="search-button" value="Sök resa" \>
         </form>
 
