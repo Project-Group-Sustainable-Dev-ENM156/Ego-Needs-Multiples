@@ -6,8 +6,8 @@ const emissionFactors = {
     on_foot: 0,
     bicycle: 0,
     ICE_car: 182, // Alternative source for cars (not used): https://www.transportstyrelsen.se/sv/om-oss/statistik-och-analys/statistik-inom-vagtrafik/statistik-over-koldioxidutslapp/statistik-over-koldioxidutslapp-2021/
-    electric_car: 58, 
-    public_transport: 6, 
+    electric_car: 58,
+    public_transport: 6,
 };
 
 const p = {
@@ -35,39 +35,43 @@ document.getElementById('search-button').addEventListener('click', function(even
     createTable()
 });
 
-function createTable() {
-    let data = {}
-    Object.keys(p).forEach(k => {
-        data[k] = {
-            emissions: get_CO2_emissions(k, emissionFactors, passengers, distance), 
-            price: calculatePrice(k, p, passengers), 
-            time: null
-        }
-    })
+async function createTable() {
+    const data = {};
 
-    let list = document.getElementById("tbod")
+    // Populate data asynchronously
+    for (const key of Object.keys(p)) {
+        const emissions = get_CO2_emissions(key, emissionFactors, passengers, distance);
+        const price = await getPrice(key, distance); // Await price calculation
+        data[key] = {
+            emissions,
+            price,
+            time: null
+        };
+    }
+
+    const list = document.getElementById("tbod");
     while (list.children.length >= 1) {
         list.removeChild(list.lastChild); // Remove rows except the first one
     }
 
     Object.entries(data).forEach(([key, value]) => {
-        let row = document.createElement("tr");
-        
+        const row = document.createElement("tr");
+
         // Create a cell for the key
-        let keyName = document.createElement("td");
+        const keyName = document.createElement("td");
         keyName.textContent = capitalizeWords(key.replace("_", " ")); // Set the key as the cell content
         row.appendChild(keyName);
-        
+
         // Create cells for emissions, price, and time
         ["emissions", "price", "time"].forEach(elem => {
-            let cell = document.createElement("td");
+            const cell = document.createElement("td");
             cell.textContent = value[elem]; // Use the value of the property
             cell.setAttribute("id", key + "_" + elem); // Set an ID for the cell
-            cell.setAttribute("class", elem); // Set an Class for the cell
+            cell.setAttribute("class", elem); // Set a class for the cell
             row.appendChild(cell);
         });
 
-        document.getElementById("tbod").appendChild(row);
+        list.appendChild(row);
     });
 
     document.getElementById('results').classList.remove('hidden');
@@ -119,20 +123,17 @@ function get_CO2_emissions(key, emissionFactors, passengers, distance) {
 
 
 // Price calculation function
-function getPrice(transportationMethod, distance) {
-    // Variables I dont have
-    const ElectricityPrice = 2.5;  // Price per kWh (kr)
-
+async function getPrice(transportationMethod, distance) {
     // Variables
     const FuelPrice = 17; // Fuel price per liter (kr)
-    const FuelConsumption = 8; // Liters per 100 km 
+    const FuelConsumption = 8; // Liters per 100 km
     const electricityConsumption = 10; // kWh per 100 km
 
     switch (transportationMethod) {
         case "ICE_car":
             return (FuelConsumption / 100) * distance * FuelPrice;
         case "electric_car":
-            return (electricityConsumption / 100) * distance * ElectricityPrice;
+            return await elektroShock(distance);
         case "public_transport":
             return 36;
         case "bicycle":
@@ -141,4 +142,107 @@ function getPrice(transportationMethod, distance) {
         default:
             throw new Error(`Invalid transportation method: ${transportationMethod}`);
     }
-};
+}
+
+// ONLY ELECTRICIANS MAY ENTER!
+// DANGER
+// High-Voltage Zone
+// --------------------------------------------------------------------------------------
+
+let electricityData = null; // Global variable to store fetched electricity data
+
+// Fetch electricity price data on page load
+document.addEventListener("DOMContentLoaded", async () => {
+    try {
+        electricityData = await fetchElectricityData();
+        console.log("Electricity price data fetched successfully.");
+    } catch (error) {
+        console.error("Error fetching electricity data:", error.message);
+        throw new Error("Failed to load electricity price data.");
+    }
+});
+
+async function fetchElectricityData() {
+    const d = new Date();
+    const apiUrl = `https://www.elprisetjustnu.se/api/v1/prices/${d.getFullYear()}/${(d.getMonth() + 1)
+        .toString()
+        .padStart(2, '0')}-${d.getDate().toString().padStart(2, '0')}_SE3.json`;
+
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) throw new Error(`Failed to fetch electricity data: HTTP ${response.status}`);
+        return await response.json();
+    } catch (error) {
+        console.error("Error fetching JSON data:", error.message);
+        throw error;
+    }
+}
+
+async function calculateCostForDistance(km) {
+    if (!electricityData) {
+        throw new Error("Electricity price data has not been loaded yet.");
+    }
+
+    const power = 6; // kW
+    const electricityPerKm = 0.2; // kWh/km
+    const electricityConsumed = electricityPerKm * km; // Total kWh required
+
+    // Map and prepare price intervals from electricity data
+    const prices = electricityData.map(entry => ({
+        timeStart: new Date(entry.time_start),
+        pricePerKwh: entry.SEK_per_kWh,
+    }));
+
+    // Find the starting index for 21:00
+    const startIndex = prices.findIndex(price =>
+        price.timeStart.getHours() === 21 && price.timeStart.getMinutes() === 0
+    );
+
+    if (startIndex === -1) {
+        throw new Error("Start time 21:00 not found in the electricity price data.");
+    }
+
+    // Calculate the total price for the given distance
+    let totalPrice = 0;
+    let remainingConsumption = electricityConsumed;
+
+    for (let i = 0; remainingConsumption > 0; i++) {
+        const index = (startIndex + i) % prices.length;
+        const priceInterval = prices[index];
+        const intervalCapacity = power;
+
+        // Calculate the consumption covered in this interval
+        const consumedInInterval = Math.min(intervalCapacity, remainingConsumption);
+        totalPrice += priceInterval.pricePerKwh * consumedInInterval;
+
+        // Reduce remaining consumption
+        remainingConsumption -= consumedInInterval;
+    }
+
+    return Math.round(totalPrice * 100) / 100; // Return the total price, rounded to 2 decimal places
+}
+
+async function elektroShock(km) {
+    try {
+        if (isNaN(km) || km <= 0) {
+            throw new Error("Please enter a valid positive distance.");
+        }
+
+        // Wait until the electricity data is available
+        if (!electricityData) {
+            console.log("Waiting for electricity data to be available...");
+            while (!electricityData) {
+                await new Promise(resolve => setTimeout(resolve, 50)); // Wait in 50ms intervals
+            }
+        }
+
+        return calculateCostForDistance(km);
+    } catch (error) {
+        console.error("Error calculating cost:", error.message);
+        throw error;
+    }
+}
+
+// --------------------------------------------------------------------------------------
+// High-Voltage Zone
+// DANGER
