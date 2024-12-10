@@ -31,6 +31,8 @@ document.getElementById('search-button').addEventListener('click', function(even
     startingPoint = document.getElementById('fromDestination').value;
     destination = document.getElementById('toDestination').value;
     passengers = document.getElementById('passengerCount').value;
+    date = document.getElementById('tripDate').value;
+    time = document.getElementById('tripTime').value;
 
     createTable()
 });
