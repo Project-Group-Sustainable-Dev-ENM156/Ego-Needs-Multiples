@@ -149,6 +149,12 @@ function get_CO2_emissions(key, emissionFactors, passengers, distance) {
     return Math.round(emissions); // Return the calculated emissions
 }
 
+function getSelectedTicket() {
+    // Find the checked radio button
+    const selected = document.querySelector('input[name="ticket_type"]:checked');
+    // Return the value of the checked radio button
+    return selected ? selected.value : null;
+}
 
 
 // Price calculation function
@@ -157,6 +163,7 @@ async function getPrice(transportationMethod, distance) {
     const FuelPrice = 17; // Fuel price per liter (kr)
     const FuelConsumption = 8; // Liters per 100 km
     const electricityConsumption = 10; // kWh per 100 km
+    const ticket = getSelectedTicket();
 
     switch (transportationMethod) {
         case "ICE_car":
@@ -164,7 +171,14 @@ async function getPrice(transportationMethod, distance) {
         case "electric_car":
             return await elektroShock(distance, 0);
         case "public_transport":
-            return 36;
+            switch (ticket) {
+                case "pb":
+                    return 0;
+                case "sb":
+                    return 36;
+                case "pl":
+                    return 0;
+            }
         case "bicycle":
         case "on_foot":
             return 0;
