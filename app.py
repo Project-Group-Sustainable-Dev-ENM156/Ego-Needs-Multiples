@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, render_template
 from test5empty import get_trip_data
 from location2search import get_location_data
 from jsonpath_ng import jsonpath, parse
+import json
 
 app = Flask(__name__)
 
@@ -38,9 +39,15 @@ def submit_trip():
     # Example: Respond with a confirmation
     #print("AAAA ", data)
     public_transport_trip_duration = find_public_transport_trip(data)
-    bike_trip_duration = find_bike_trip(data)
+    bike_trip_duration, bike_trip_distance = find_bike_trip(data)
 
-    return jsonify({'message': 'Trip data received successfully!', 'data': data})
+    response_data = {
+        "public_transport_trip_duration": public_transport_trip_duration,
+        "bike_trip_duration": bike_trip_duration,
+        "bike_trip_distance": bike_trip_distance
+    }
+
+    return jsonify({'message': 'Trip data received successfully!', 'data': response_data})
 
 def get_lat_long_by_name(arr, name):
     print("NAME ", name)
@@ -73,9 +80,11 @@ def print_list(arr):
 def find_bike_trip(data):
     bike_trip = data["results"][0]
     total_trip_time = sum_part_durations(bike_trip, "destinationLink", "Biking")
+    total_distance = sum_biking_distances(bike_trip, "destinationLink")
 
     print("Bike trip duration: ", total_trip_time)
-    return total_trip_time
+    print("Bike trip distance: ", total_distance)
+    return total_trip_time, total_distance
 
 def find_public_transport_trip(data):
     # Get all results
@@ -139,6 +148,16 @@ def sum_part_durations(trip, json_keyword, transportation_mode):
     else:
         #print("No time spent on ", transportation_mode)
         return 0
+    
+def sum_biking_distances(trip, json_keyword):
+    if json_keyword in trip:
+        reference = trip[json_keyword]
+
+        jsonpath_expr = parse("$..distanceInMeters")
+        matches = jsonpath_expr.find(reference)
+        total_distance = matches[0].value if matches else None
+
+        return total_distance
 
 
 if __name__ == '__main__':
