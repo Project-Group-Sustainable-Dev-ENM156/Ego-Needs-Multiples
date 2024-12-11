@@ -87,17 +87,6 @@
         
           <span class="subtitle">Till </span>
           <input type="text" style="border-radius:8px;" class="input-text" id="toDestination" placeholder="" required\>
-        
-          <div id="more-options">
-              <input type="radio" class="ticket-option, passenger-checkbox" name="ticket_type" value="pb" checked="checked">
-              <label for="pb" class="subtitle" style="display:inline-block">Periodbiljett</label>
-                
-              <input type="radio" class="ticket-option, passenger-checkbox" name="ticket_type" value="sb">
-              <label for="sb" class="subtitle" style="display:inline-block">Enkelbiljett</label>
-                
-              <input type="radio" class="ticket-option, passenger-checkbox" name="ticket_type" value="pl">
-              <label for="pl" class="subtitle" style="display:inline-block;">Planka</label>
-          </div>
 
             <div class="small-field">
               <label for="tripDate" class="subtitle">Datum</label>
@@ -113,6 +102,17 @@
               <span class="subtitle">Passagerare </span>
               <input type="number" class="input-text" id="passengerCount" min="1" max="999" placeholder="1" style="width:100px; float:right;"required\>
             </div>
+            
+          <div id="more-options">
+              <input type="radio" class="ticket-option, passenger-checkbox" name="ticket_type" value="pb" checked="checked">
+              <label for="pb" class="subtitle"style="margin-top:12px; margin-right:16px;">Periodbiljett</label>
+                
+              <input type="radio" class="ticket-option, passenger-checkbox" name="ticket_type" value="sb">
+              <label for="sb" class="subtitle"style="margin-top:12px; margin-right:16px;">Enkelbiljett</label>
+                
+              <input type="radio" class="ticket-option, passenger-checkbox" name="ticket_type" value="pl">
+              <label for="pl" class="subtitle" style="margin-top:12px; margin-right:16px;">Planka</label>
+          </div>
             
             <input type="button" id="search-button" value="Sök resa" \>
         </form>
