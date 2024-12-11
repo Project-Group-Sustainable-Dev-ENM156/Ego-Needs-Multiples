@@ -2,8 +2,8 @@ import requests
 import json
 
 # Your Västtrafik credentials
-client_id = 'R0dKK2cKgVWjH9SKJQQfXHsGoHoa'
-client_secret = 'cNJA4l0fjYehVt5p_cg47XD50EIa'
+client_id = ''
+client_secret = ''
 auth_url = 'https://ext-api.vasttrafik.se/token'
 api_url = 'https://ext-api.vasttrafik.se/pr/v4/locations/by-text'
 
