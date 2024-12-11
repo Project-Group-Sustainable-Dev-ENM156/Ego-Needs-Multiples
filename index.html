@@ -51,35 +51,56 @@
   
     <article>
   
-    <div class="container">
-        <span class="subtitle" style="margin-top:64px;"> ChalmersProjekt </span>
-        <h1>Utökad Reseplanerare</h1>
-    
-        <form id="tripForm">
-            <span class="subtitle">Från </span>
-            <input type="text" class="input-text" id="fromDestination" placeholder="" required\>
-    
-            <span class="subtitle">Till </span>
-            <input type="text" class="input-text" id="toDestination" placeholder="" required\>
-    
-            <span class="subtitle">Antal passagerare </span>
-            <input type="number" class="input-text" id="passengerCount" value="1" required\>
+      <aside>
 
-            <div id="more-options">
-                <input type="radio" class="ticket-option" name="ticket_type" value="pb" checked="checked">
-                <label for="pb">Periodbiljett</label><br>
-                
-                <input type="radio" class="ticket-option" name="ticket_type" value="sb">
-                <label for="sb">Enkelbiljet</label><br>
-                
-                <input type="radio" class="ticket-option" name="ticket_type" value="pl">
-                <label for="pl">Planka</label><br>
-            </div>
-            <input type="button" id="search-button" value="Sök resa" \>
+        <input type="range" id="social" name="social" min="0" max="100" orient="vertical"/>
+        <input type="range" id="ecological" name="ecological" min="0" max="100" orient="vertical"/>
+        <input type="range" id="economical" name="economical" min="0" max="100" orient="vertical"/>
+            
+        <img class="filter-red"
+  src="svg/social.svg"
+  height="32"
+  width="32" />
+
+        <img class="filter-red"
+  src="svg/environment.svg"
+  height="32"
+  width="32" />
+
+        <img class="filter-red"
+  src="svg/economic.svg"
+  height="32"
+  width="32" />
+
+            
+      </aside>
+  
+      <div class="container">
+    
+          <span class="subtitle" style="margin-top:64px;"> ChalmersProjekt </span>
+          <h1>Utökad Reseplanerare</h1>
+    
+          <form id="tripForm">
+    
+          <span class="subtitle">Från </span>
+          <input type="text" class="input-text" id="fromDestination" placeholder="" required\>
+        
+          <span class="subtitle">Till </span>
+          <input type="text" class="input-text" id="toDestination" placeholder="" required\>
+        
+          <span class="subtitle">Antal passagerare </span>
+          <input type="number" class="input-text" id="passengerCount" min="1" placeholder="" required\>
+        
+          <span class="subtitle">Periodbiljett? </span>
+          <input type="checkbox" class="passenger-checkbox"\>
+        
+          <input type="button" id="search-button" value="Sök resa"\>
+      
         </form>
 
         <!-- Hidden Table -->
         <div id="results" class="hidden">
+            <h3>Trip Details</h3>
             <table>
                 <thead>
                     <tr>

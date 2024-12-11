@@ -123,34 +123,95 @@ span.subtitle {
   display: none;
 }
 
-#results {
-  margin-top: 30px;
+aside {
+    box-shadow: 10px 10px 0px 4px rgba(65, 57, 86, 0.8);
+    margin-left:58%;
+    background-color: #FFFFFF;
+    margin-right:auto;
+    margin-bottom:auto;
+    margin-top:auto;
+    width:100%;
+    padding:16px;
+    max-width:160px;
+    border: 1px solid #413956;
+    position:absolute;
+    float:right;
+    display:block;
+    border-radius: 4px;
 }
 
-table {
-  margin: auto;
-  width: 100%;
-  border-collapse: collapse;  
-  font-size: x-large;
+
+
+    /* Style for the range input */
+    input[type="range"] {
+      -webkit-appearance: none; /* Removes default styling */
+      width: 16px; /* Adjust width */
+      height: 400px; /* Adjust height */
+      border: none;
+      outline: none;
+      cursor: pointer;
+      margin-right: 16px;
+      margin-left: 16px;
+      border-radius: 4px;
+    }
+
+    /* Track styling */
+    input[type="range"]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 100%;
+      background: #F25757;
+      border-radius: 4px;
+    }
+
+    /* Thumb styling */
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none; /* Remove default thumb styling */
+      appearance: none;
+      width: 16px; /* Thumb width */
+      height: 16px; /* Thumb height */
+      background: #007BFF; /* Thumb color */
+      border-radius: 50%; /* Circular thumb */
+      cursor: pointer;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    }
+
+    /* For Firefox */
+    input[type="range"]::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      background: #FFFFFF;
+      border-radius: 50%;
+      border: 10px solid #F25757;
+      cursor: pointer;
+    }
+
+    input[type="range"]::-moz-range-track {
+      width: 100%;
+      background: #ddd;
+      border-radius: 8px;
+    }
+
+    input[type="range"]::-ms-track {
+      width: 100%;
+      background: #F25757;
+      border-color: #F25757;
+      border-width: 12px 0;
+      color: #F25757;
+    }
+
+/** FF*/
+input[type="range"]::-moz-range-progress {
+  background-color: #F25757; 
+  width:16px;
+  border-radius: 8px;
 }
 
-th, td {
-  border: 1.5px solid #ccc;
-  text-align: center; 
-  color: #413956;
-  font-family: ibm plex sans condensed,noto display light,sans-serif;
-
+img {
+   margin-top: 8px;
+   margin-left: 9px;
+   margin-right: 8px;
 }
 
-#more-options {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  vertical-align: middle;
-}
-
-.ticket-option {
-  font-family: ibm plex sans condensed,noto display light,sans-serif;
-  font-size: 18px;
-  color: #413956;
+.filter-red {
+  filter: brightness(0) saturate(100%) invert(43%) sepia(28%) saturate(6018%) hue-rotate(335deg) brightness(119%) contrast(89%);
 }
