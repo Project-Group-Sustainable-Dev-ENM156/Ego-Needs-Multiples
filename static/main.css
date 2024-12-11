@@ -265,11 +265,7 @@ table {
 }
 
 .small-field {
-  margin-top: 15px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
 }
 
 #tripDate {
