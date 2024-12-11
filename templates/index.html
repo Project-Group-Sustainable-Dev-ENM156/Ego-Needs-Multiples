@@ -87,9 +87,6 @@
           <span class="subtitle">Till </span>
           <input type="text" class="input-text" id="toDestination" placeholder="" required\>
         
-          <span class="subtitle">Antal passagerare </span>
-          <input type="number" class="input-text" id="passengerCount" min="1" max="999" placeholder="1" style="width:15%"required\>
-        
           <span class="subtitle">Biljett?</span>
           <div id="more-options">
               <input type="radio" class="ticket-option, passenger-checkbox" name="ticket_type" value="pb" checked="checked">
@@ -102,10 +99,20 @@
               <label for="pl" class="subtitle" style="display:inline-block;">Planka</label>
           </div>
 
-            <label for="tripDate" class="subtitle">Datum</label>
-            <input type="date" id="tripDate" class="input-text" name="tripDate" required><br>
-            <label for="tripTime" class="subtitle">Tid</label>
-            <input type="time" id="tripTime" class="input-text" name="tripTime" required><br><br>
+            <div class="small-field">
+              <label for="tripDate" class="subtitle">Datum</label>
+              <input type="date" id="tripDate" class="input-text" name="tripDate" style="width:180px; display:inline-block;" required>
+            </div>
+            
+            <div class="small-field">
+              <label for="tripTime" class="subtitle">Tid</label>
+              <input type="time" id="tripTime" class="input-text" name="tripTime" style="width:100px;" required>
+            </div>
+            
+            <div class="small-field" style="float:right;">
+              <span class="subtitle">Antal passagerare </span>
+              <input type="number" class="input-text" id="passengerCount" min="1" max="999" placeholder="1" style="width:100px; float:right;"required\>
+            </div>
             
             <input type="button" id="search-button" value="Sök resa" \>
         </form>

@@ -236,3 +236,7 @@ table {
   border-collapse: collapse;  
   font-size: x-large;
 }
+
+.small-field {
+  display:inline-block;
+}
