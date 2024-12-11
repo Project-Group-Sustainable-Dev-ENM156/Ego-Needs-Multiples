@@ -55,6 +55,7 @@ document.getElementById('search-button').addEventListener('click', function(even
     .then(data => {
         console.log('Response from backend, ', data);
         // Handle the response from the server here
+
     })
     .catch(error => {
         console.error('Error:', error);
@@ -249,7 +250,6 @@ async function calculateCostForDistance(km, mode) {
         remainingConsumption -= consumedInInterval;
     }
 
-    console.log(mode)
     if (mode == 0) {
         return Math.round(totalPrice * 100) / 100; // Return the total price, rounded to 2 decimal places
     } else {
