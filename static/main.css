@@ -105,7 +105,7 @@ h1 {
   background-color: #F25757;
   color: #F4EDED;
   text-transform: uppercase;
-  border-radius: 32px;
+  border-radius: 8px;
 }
 .search-button:hover {
   background-color: #AD002D;
