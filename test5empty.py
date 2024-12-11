@@ -57,3 +57,22 @@ if __name__ == '__main__':
         journey_data = get_journey(token, origin_gid, destination_gid, date, time)
         if journey_data:
             save_to_json(journey_data, 'journey_result.json')
+
+
+
+
+
+#####################
+# Exported function #
+#####################
+def get_trip_data(origin, destination, date, time):
+    token = get_access_token(client_id, client_secret)
+    if token:
+        # Replace these with actual GIDs from Västtrafik's system
+        origin_gid = '9021014001760000'  # Example: Gothenburg Central Station
+        destination_gid = '9021014003980000'  # Example: Another valid GID
+        #date = '2024-12-10'  # Specify your desired date
+        #time = '14:00'       # Specify your desired time
+
+        journey_data = get_journey(token, origin_gid, destination_gid, date, time)
+        return journey_data
