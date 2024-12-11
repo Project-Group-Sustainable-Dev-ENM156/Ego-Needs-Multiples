@@ -90,16 +90,15 @@
           <span class="subtitle">Antal passagerare </span>
           <input type="number" class="input-text" id="passengerCount" min="1" placeholder="" required\>
         
-          <span class="subtitle">Biljett?</span>
           <div id="more-options">
-              <input type="radio" class="ticket-option, passenger-checkbox" name="ticket_type" value="pb" checked="checked">
-              <label for="pb" class="subtitle" style="display:inline-block">Periodbiljett</label>
+              <input type="radio" class="passenger-checkbox" name="ticket_type" value="pb" checked="checked">
+              <label for="pb" class="box-text">Periodbiljett</label>
+              
+              <input type="radio" class="passenger-checkbox" name="ticket_type" value="sb">
+              <label for="sb" class="box-text">Enkelbiljett</label>
                 
-              <input type="radio" class="ticket-option, passenger-checkbox" name="ticket_type" value="sb">
-              <label for="sb" class="subtitle" style="display:inline-block">Enkelbiljett</label>
-                
-              <input type="radio" class="ticket-option, passenger-checkbox" name="ticket_type" value="pl">
-              <label for="pl" class="subtitle" style="display:inline-block;">Planka</label>
+              <input type="radio" class="passenger-checkbox" name="ticket_type" value="pl">
+              <label for="pl" class="box-text">Planka</label>
           </div>
 
             <label for="tripDate" class="subtitle">Datum</label>
