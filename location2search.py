@@ -36,7 +36,7 @@ def get_locations_by_text(access_token, query, limit=10, offset=0, bod_search=Fa
     response = requests.get(api_url, headers=headers, params=params)
 
     if response.status_code == 200:
-        print(response.json())
+        #print(response.json())
         return response.json()
     else:
         print(f"Error making /locations/by-text request: {response.status_code} {response.text}")
@@ -67,3 +67,13 @@ if __name__ == '__main__':
                 break
             except Exception as e:
                 print(f"An error occurred: {e}")
+
+#####################
+# Exported function #
+#####################
+def get_location_data(query):
+    token = get_access_token(client_id, client_secret)
+    if token:
+        location_data = get_locations_by_text(token, query, limit=10)
+        #print("FROM LOCATION2SEARCH ", location_data)
+        return location_data

@@ -20,14 +20,19 @@ def get_access_token(client_id, client_secret):
         return None
 
 # Step 2: Make a request to the /journeys endpoint
-def get_journey(access_token, origin_gid, destination_gid, date, time):
+def get_journey(access_token, pos, date, time):
+    [originLatitude, originLongitude, destinationLatitude, destinationLongitude] = pos
     headers = {'Authorization': f'Bearer {access_token}'}
     params = {
-        'originGid': origin_gid,
-        'destinationGid': destination_gid,
+        'originLatitude': originLatitude,
+        'originLongitude': originLongitude,
+        'destinationLatitude': destinationLatitude,
+        'destinationLongitude': destinationLongitude,
         'date': date,      # Format: YYYY-MM-DD
         'time': time,      # Format: HH:MM
-        'searchForArrival': False  # True for arrival, False for departure
+        'searchForArrival': False,  # True for arrival, False for departure
+        'transportModes': ['bike'], # ['walk', 'tram', 'bus', 'train', 'bike'], # 
+        # 'totalBike': 1 
     }
 
     response = requests.get(api_url, headers=headers, params=params)
@@ -49,12 +54,20 @@ if __name__ == '__main__':
     token = get_access_token(client_id, client_secret)
     if token:
         # Replace these with actual GIDs from Västtrafik's system
-        origin_gid = '9021014001760000'  # Example: Gothenburg Central Station
-        destination_gid = '9021014003980000'  # Example: Another valid GID
+        originLatitude = '57.696742'
+        originLongitude = '11.986909'
+
+        destinationLatitude = '57.687159'
+        destinationLongitude = '11.997022'
+
+        pos = [originLatitude, originLongitude, destinationLatitude, destinationLongitude]
+
+        # origin_gid = '9021014001760000'  # Example: Gothenburg Central Station
+        # destination_gid = '9021014003980000'  # Example: Another valid GID
         date = '2024-12-10'  # Specify your desired date
         time = '14:00'       # Specify your desired time
 
-        journey_data = get_journey(token, origin_gid, destination_gid, date, time)
+        journey_data = get_journey(token, pos, date, time)
         if journey_data:
             save_to_json(journey_data, 'journey_result.json')
 
@@ -65,14 +78,11 @@ if __name__ == '__main__':
 #####################
 # Exported function #
 #####################
-def get_trip_data(origin, destination, date, time):
+def get_trip_data(pos, date, time):
     token = get_access_token(client_id, client_secret)
     if token:
-        # Replace these with actual GIDs from Västtrafik's system
-        origin_gid = '9021014001760000'  # Example: Gothenburg Central Station
-        destination_gid = '9021014003980000'  # Example: Another valid GID
-        #date = '2024-12-10'  # Specify your desired date
-        #time = '14:00'       # Specify your desired time
 
-        journey_data = get_journey(token, origin_gid, destination_gid, date, time)
+        journey_data = get_journey(token, pos, date, time)
+        # if journey_data: # see data in json file easier
+        #     save_to_json(journey_data, 'journey_result_live.json')
         return journey_data
