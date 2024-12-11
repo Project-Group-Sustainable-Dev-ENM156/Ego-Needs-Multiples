@@ -31,8 +31,8 @@ def get_journey(access_token, pos, date, time):
         'date': date,      # Format: YYYY-MM-DD
         'time': time,      # Format: HH:MM
         'searchForArrival': False,  # True for arrival, False for departure
-        'transportModes': ['bike'], # ['walk', 'tram', 'bus', 'train', 'bike'], # 
-        # 'totalBike': 1 
+        'transportModes': ['walk', 'bike', 'bus', 'tram', 'train'], # ['walk', 'tram', 'bus', 'train', 'bike'], # 
+        'totalBike': '1,0,20000',
     }
 
     response = requests.get(api_url, headers=headers, params=params)
@@ -85,4 +85,6 @@ def get_trip_data(pos, date, time):
         journey_data = get_journey(token, pos, date, time)
         # if journey_data: # see data in json file easier
         #     save_to_json(journey_data, 'journey_result_live.json')
+        
+        save_to_json(journey_data, 'journey_result.json')
         return journey_data
