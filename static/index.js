@@ -1,5 +1,11 @@
 // Define CO2 emission factors (kg CO2 per km) for different transportation methods
-const distance = 100
+const distance = 1000    // [m]
+var time_data = {      // Value should be set by API if possible. Otherwise distance will be used
+    walk: "notSet",
+    bicycle: "notSet",
+    public_transport: "notSet",
+    car: "notSet"
+};     
 const emissionFactors = {
     // Average kg co2 emissions per km
     // Source: https://www.vasttrafik.se/info/statistik/ using the calc for electric buss 30 people and 1 for cars
@@ -71,10 +77,11 @@ async function createTable() {
     for (const key of Object.keys(p)) {
         const emissions = get_CO2_emissions(key, emissionFactors, passengers, distance);
         const price = await getPrice(key, distance); // Await price calculation
+        const time = getTime(key, time_data, distance)
         data[key] = {
             emissions,
             price,
-            time: null
+            time
         };
     }
 
@@ -150,7 +157,6 @@ function get_CO2_emissions(key, emissionFactors, passengers, distance) {
 }
 
 
-
 // Price calculation function
 async function getPrice(transportationMethod, distance) {
     // Variables
@@ -168,6 +174,47 @@ async function getPrice(transportationMethod, distance) {
         case "bicycle":
         case "on_foot":
             return 0;
+        default:
+            throw new Error(`Invalid transportation method: ${transportationMethod}`);
+    }
+}
+
+function getTime(transportationMethod, time_data, distance){
+    const avg_walking_speed = 4.75 * 16.67 // [m/min]. Source for all: https://tekniskhandbok.goteborg.se/Arkiv/2019-1/wp-content/uploads/1E_9_Hastighet_2018-10.pdf
+    const avg_biking_speed = 16 * 16.67   // * 16.67 to convert km/h into m/min
+    const avg_public_transport_speed = 9 * 16.67
+    const avg_driving_speed = 25 * 16.67
+
+    switch (transportationMethod) {
+        case "ICE_car":
+        case "electric_car":
+            if(time_data["car"] != "notSet"){
+                return Math.round(parseFloat(time_data["car"]))
+            }
+            else if(distance != undefined){
+                return Math.round(distance/avg_driving_speed)
+            }
+        case "public_transport":
+            if(time_data["public_transport"] != "notSet"){
+                return Math.round(parseFloat(time_data["public_transport"]))
+            }
+            else if(distance != undefined){
+                return Math.round(distance/avg_public_transport_speed)
+            }
+        case "bicycle":
+            if(time_data["bicycle"] != "notSet"){
+                return Math.round(parseFloat(time_data["bicycle"]))
+            }
+            else if(distance != undefined){
+                return Math.round(distance/avg_biking_speed)
+            }
+        case "on_foot":
+            if(time_data["walk"] != "notSet"){
+                return Math.round(parseFloat(time_data["walk"]))
+            }
+            else if(distance != undefined){
+                return Math.round(distance/avg_walking_speed)
+            }
         default:
             throw new Error(`Invalid transportation method: ${transportationMethod}`);
     }
