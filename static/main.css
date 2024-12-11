@@ -254,3 +254,36 @@ table {
   text-transform: uppercase;
   color: #413956;
 }
+
+.box-text-line {
+  padding-right: 5px;
+  padding-left: 20px;
+  font-family: ibm plex sans condensed,noto display light,sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #413956;
+}
+
+.small-field {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#tripDate {
+  width:180px; 
+  display:inline-block;
+}
+
+#passengerCount {
+  width:100px; float:right;
+}
+
+#test { 
+  font-family: ibm plex sans condensed,noto display light,sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #413956;
+}
