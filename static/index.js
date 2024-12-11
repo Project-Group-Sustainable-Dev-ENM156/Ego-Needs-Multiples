@@ -22,6 +22,9 @@ var startingPoint;
 var destination;
 var startingPoint;
 var startingPoint;
+var social;
+var ecological;
+var economical;
 
 // Event Listener for Form Submission
 document.getElementById('search-button').addEventListener('click', function(event) {
@@ -33,6 +36,9 @@ document.getElementById('search-button').addEventListener('click', function(even
     passengers = document.getElementById('passengerCount').value;
     date = document.getElementById('tripDate').value;
     time = document.getElementById('tripTime').value;
+    social = document.getElementById('social').value;
+    ecological = document.getElementById('ecological').value;
+    economical = document.getElementById('economical').value;
 
     // Create an object to send
     const tripData = {
@@ -72,11 +78,14 @@ async function createTable() {
         const emissions = get_CO2_emissions(key, emissionFactors, passengers, distance);
         const price = await getPrice(key, distance, passengers); // Await price calculation
         data[key] = {
-            emissions,
-            price,
-            time: null
+            emissions: emissions,
+            price: price,
+            time: null,
+            rating: 0
         };
     }
+
+    rate(data);
 
     const list = document.getElementById("tbod");
     while (list.children.length >= 1) {
@@ -104,6 +113,40 @@ async function createTable() {
     });
 
     document.getElementById('results').classList.remove('hidden');
+}
+
+function rate(data) {
+    const tot = social + economical + ecological;
+    const emissions_weight = ecological / tot;
+    const price_weight = economical / tot;
+    const time_weight = social / tot;
+    const max_emissions = 0;
+    const max_price = 0;
+    const max_time = 0;
+    Object.keys(data).forEach(key => {
+        if (data[key].emissions > max_emissions) {
+            max_emissions = data[key].emissions;
+        }
+        if (data[key].price > max_price) {
+            max_price = data[key].price;
+        }
+        if (data[key].time > max_time) {
+            max_time = data[key].time;
+        }
+      });
+    const max_rating = 0;
+    // Find preliminary rating
+    Object.keys(data).forEach(key => {
+        data[key].rating = emissions_weight * max_emissions / data[key].emissions + price_weight * max_price / data[key].price + time_weight * max_time / data[key].time;
+        if (data[key].rating > max_rating) {
+            max_rating = data[key].rating;
+        }
+      });
+    // Normalize rating to 0-100
+    Object.keys(data).forEach(key => {
+        data[key].rating = 100 * data[key].rating / max_rating;
+    });
+      
 }
 
 function capitalizeWords(sentence) {
