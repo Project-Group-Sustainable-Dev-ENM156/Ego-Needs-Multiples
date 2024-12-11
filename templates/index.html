@@ -47,34 +47,60 @@
   
   <body>
   
-    <div class="background-image" style="background-image:url(background.jpg)"></div>
+    <div class="background-image" style="background-image:url(static/background.jpg)"></div>
   
     <article>
   
-    <div class="container">
-        <span class="subtitle" style="margin-top:64px;"> ChalmersProjekt </span>
-        <h1>Utökad Reseplanerare</h1>
-    
-        <form id="tripForm">
-            <span class="subtitle">Från </span>
-            <input type="text" class="input-text" id="fromDestination" placeholder="" required\>
-    
-            <span class="subtitle">Till </span>
-            <input type="text" class="input-text" id="toDestination" placeholder="" required\>
-    
-            <span class="subtitle">Antal passagerare </span>
-            <input type="number" class="input-text" id="passengerCount" value="1" required\>
+      <aside>
 
-            <div id="more-options">
-                <input type="radio" class="ticket-option" name="ticket_type" value="pb" checked="checked">
-                <label for="pb" class="sm-subtitle">Periodbiljett</label><br>
+        <input type="range" id="social" name="social" min="0" max="100" orient="vertical"/>
+        <input type="range" id="ecological" name="ecological" min="0" max="100" orient="vertical"/>
+        <input type="range" id="economical" name="economical" min="0" max="100" orient="vertical"/>
+            
+        <img class="filter-red"
+          src="static/social.svg"
+          height="32"
+          width="32" />
+
+        <img class="filter-red"
+          src="static/environment.svg"
+          height="32"
+          width="32" />
+
+        <img class="filter-red"
+          src="static/economic.svg"
+          height="32"
+          width="32" />
+
+      </aside>
+  
+      <div class="container">
+    
+          <span class="subtitle" style="margin-top:64px;"> ChalmersProjekt </span>
+          <h1>Utökad Reseplanerare</h1>
+    
+          <form id="tripForm">
+    
+          <span class="subtitle">Från </span>
+          <input type="text" class="input-text" id="fromDestination" placeholder="" required\>
+        
+          <span class="subtitle">Till </span>
+          <input type="text" class="input-text" id="toDestination" placeholder="" required\>
+        
+          <span class="subtitle">Antal passagerare </span>
+          <input type="number" class="input-text" id="passengerCount" min="1" placeholder="" required\>
+        
+          <span class="subtitle">Biljett?</span>
+          <div id="more-options">
+              <input type="radio" class="ticket-option, passenger-checkbox" name="ticket_type" value="pb" checked="checked">
+              <label for="pb" class="subtitle" style="display:inline-block">Periodbiljett</label>
                 
-                <input type="radio" class="ticket-option" name="ticket_type" value="sb">
-                <label for="sb" class="sm-subtitle">Enkelbiljett</label><br>
+              <input type="radio" class="ticket-option, passenger-checkbox" name="ticket_type" value="sb">
+              <label for="sb" class="subtitle" style="display:inline-block">Enkelbiljett</label>
                 
-                <input type="radio" class="ticket-option" name="ticket_type" value="pl">
-                <label for="pl" class="sm-subtitle">Planka</label><br>
-            </div>
+              <input type="radio" class="ticket-option, passenger-checkbox" name="ticket_type" value="pl">
+              <label for="pl" class="subtitle" style="display:inline-block;">Planka</label>
+          </div>
 
             <label for="tripDate" class="subtitle">Datum</label>
             <input type="date" id="tripDate" class="input-text" name="tripDate" required><br>
@@ -85,7 +111,9 @@
         </form>
 
         <!-- Hidden Table -->
-        <div id="results" class="hidden">
+        <div id="results" class="hidden" style="margin-top:48px;">
+          <hr class="solid" style="color:#ccc;">
+            <h1 style="margin-top:48px; margin-bottom:16px;">Trip Details</h1>
             <table>
                 <thead>
                     <tr>

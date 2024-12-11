@@ -55,6 +55,7 @@ document.getElementById('search-button').addEventListener('click', function(even
     .then(data => {
         console.log('Response from backend, ', data);
         // Handle the response from the server here
+
     })
     .catch(error => {
         console.error('Error:', error);
@@ -69,7 +70,7 @@ async function createTable() {
     // Populate data asynchronously
     for (const key of Object.keys(p)) {
         const emissions = get_CO2_emissions(key, emissionFactors, passengers, distance);
-        const price = await getPrice(key, distance); // Await price calculation
+        const price = await getPrice(key, distance, passengers); // Await price calculation
         data[key] = {
             emissions,
             price,
@@ -151,19 +152,24 @@ function get_CO2_emissions(key, emissionFactors, passengers, distance) {
 
 
 // Price calculation function
-async function getPrice(transportationMethod, distance) {
+async function getPrice(transportationMethod, distance, passengers) {
     // Variables
     const FuelPrice = 17; // Fuel price per liter (kr)
     const FuelConsumption = 8; // Liters per 100 km
     const electricityConsumption = 10; // kWh per 100 km
+    const carsRequired = Math.ceil(passengers / 5);
 
     switch (transportationMethod) {
         case "ICE_car":
-            return (FuelConsumption / 100) * distance * FuelPrice;
+            const price =  (FuelConsumption / 100) * distance * FuelPrice;
+            const totalPrice = carsRequired * price;
+            return Math.round(totalPrice / passengers);
         case "electric_car":
-            return await elektroShock(distance, 0);
+            const price1 = await elektroShock(distance, 0);
+            const totalPrice2 = carsRequired * price1;
+            return Math.round(totalPrice2 / passengers);
         case "public_transport":
-            return 36;
+            return 36 * passengers;
         case "bicycle":
         case "on_foot":
             return 0;
@@ -249,7 +255,6 @@ async function calculateCostForDistance(km, mode) {
         remainingConsumption -= consumedInInterval;
     }
 
-    console.log(mode)
     if (mode == 0) {
         return Math.round(totalPrice * 100) / 100; // Return the total price, rounded to 2 decimal places
     } else {
