@@ -70,7 +70,7 @@ async function createTable() {
     // Populate data asynchronously
     for (const key of Object.keys(p)) {
         const emissions = get_CO2_emissions(key, emissionFactors, passengers, distance);
-        const price = await getPrice(key, distance); // Await price calculation
+        const price = await getPrice(key, distance, passengers); // Await price calculation
         data[key] = {
             emissions,
             price,
@@ -158,24 +158,29 @@ function getSelectedTicket() {
 
 
 // Price calculation function
-async function getPrice(transportationMethod, distance) {
+async function getPrice(transportationMethod, distance, passengers) {
     // Variables
     const FuelPrice = 17; // Fuel price per liter (kr)
     const FuelConsumption = 8; // Liters per 100 km
     const electricityConsumption = 10; // kWh per 100 km
+    const carsRequired = Math.ceil(passengers / 5);
     const ticket = getSelectedTicket();
 
     switch (transportationMethod) {
         case "ICE_car":
-            return (FuelConsumption / 100) * distance * FuelPrice;
+            const price =  (FuelConsumption / 100) * distance * FuelPrice;
+            const totalPrice = carsRequired * price;
+            return Math.round(totalPrice / passengers);
         case "electric_car":
-            return await elektroShock(distance, 0);
+            const price1 = await elektroShock(distance, 0);
+            const totalPrice2 = carsRequired * price1;
+            return Math.round(totalPrice2 / passengers);
         case "public_transport":
             switch (ticket) {
                 case "pb":
                     return 0;
                 case "sb":
-                    return 36;
+                    return 36 * passengers;
                 case "pl":
                     return 0;
             }
