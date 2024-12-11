@@ -82,6 +82,7 @@ h1 {
   text-transform: uppercase;
   background-color:#FFFFFF;
   color: #413956;
+  border-radius: 32px;
 }
 .input-text:hover {
   background-color: #EAEAEA;
@@ -104,6 +105,7 @@ h1 {
   background-color: #F25757;
   color: #F4EDED;
   text-transform: uppercase;
+  border-radius: 32px;
 }
 .search-button:hover {
   background-color: #AD002D;
