@@ -49,7 +49,7 @@ h1 {
 }
 
 /* Subtitle to h1 header. */
-span.subtitle {
+.subtitle {
   font-family: ibm plex sans condensed,noto display light,sans-serif;
   font-size: 16px;
   line-height: 1;
@@ -59,6 +59,12 @@ span.subtitle {
   margin: 0;
   margin-top: 24px;
   height: 22px;
+  color: #413956;
+}
+
+.sm-subtitle {
+  font-family: ibm plex sans condensed,noto display light,sans-serif;
+  font-size: 16px;
   color: #413956;
 }
 

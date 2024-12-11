@@ -24,10 +24,10 @@
   
     <!-- Title and Icon -->
     <title>Utökad Reseplanerare</title>
-    <link rel="icon" href="icon.png" type="image/icon type">
+    <link rel="icon" href="{{ url_for('static', filename='icon.png') }}" type="image/icon type">
   
     <!-- Linked Files -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
   
     <!-- Page Settinga -->
     <meta charset="utf-8" />
@@ -96,6 +96,23 @@
         
           <input type="button" id="search-button" value="Sök resa"\>
       
+            <div id="more-options">
+                <input type="radio" class="ticket-option" name="ticket_type" value="pb" checked="checked">
+                <label for="pb" class="sm-subtitle">Periodbiljett</label><br>
+                
+                <input type="radio" class="ticket-option" name="ticket_type" value="sb">
+                <label for="sb" class="sm-subtitle">Enkelbiljett</label><br>
+                
+                <input type="radio" class="ticket-option" name="ticket_type" value="pl">
+                <label for="pl" class="sm-subtitle">Planka</label><br>
+            </div>
+
+            <label for="tripDate" class="subtitle">Datum</label>
+            <input type="date" id="tripDate" class="input-text" name="tripDate" required><br>
+            <label for="tripTime" class="subtitle">Tid</label>
+            <input type="time" id="tripTime" class="input-text" name="tripTime" required><br><br>
+            
+            <input type="button" id="search-button" value="Sök resa" \>
         </form>
 
         <!-- Hidden Table -->
@@ -115,7 +132,7 @@
         </div>
       </div>
 
-      <script src="index.js" defer></script>
+      <script src="{{ url_for('static', filename='index.js') }}" defer></script>
     
     </article>
     
