@@ -49,13 +49,15 @@
   
     <div class="background-image" style="background-image:url(static/background.jpg)"></div>
   
-    <img class="filter-red"
-      src="static/icon.svg"
-      height="32"
-      width="32"/>
+
 
   
     <article>
+    
+    <img
+      src="static/icon.svg"
+      height="32"
+      width="32"/>
   
       <aside>
 
@@ -93,29 +95,31 @@
           <span class="subtitle">Till </span>
           <input type="text" style="border-radius:8px;" class="input-text" id="toDestination" placeholder="" required\>
         
+          <span class="subtitle">Biljett?</span>
           <div id="more-options">
-              <input type="radio" class="passenger-checkbox" name="ticket_type" value="pb" checked="checked">
-              <label for="pb" class="box-text">Periodbiljett</label>
-              
-              <input type="radio" class="passenger-checkbox" name="ticket_type" value="sb">
-              <label for="sb" class="box-text">Enkelbiljett</label>
+              <input type="radio" class="ticket-option, passenger-checkbox" name="ticket_type" value="pb" checked="checked">
+              <label for="pb" class="subtitle" style="display:inline-block">Periodbiljett</label>
                 
-              <input type="radio" class="passenger-checkbox" name="ticket_type" value="pl">
-              <label for="pl" class="box-text">Planka</label>
+              <input type="radio" class="ticket-option, passenger-checkbox" name="ticket_type" value="sb">
+              <label for="sb" class="subtitle" style="display:inline-block">Enkelbiljett</label>
+                
+              <input type="radio" class="ticket-option, passenger-checkbox" name="ticket_type" value="pl">
+              <label for="pl" class="subtitle" style="display:inline-block;">Planka</label>
           </div>
 
             <div class="small-field">
+              <label for="tripDate" class="subtitle">Datum</label>
+              <input type="date" id="tripDate" class="input-text" name="tripDate" style="width:180px; display:inline-block;" required>
+            </div>
             
-              <label for="tripDate" class="box-text-line">Datum</label>
-              <input type="date" id="tripDate" class="input-text" name="tripDate"
-                required>
-            
-              <label for="tripTime" class="box-text-line">Tid</label>
+            <div class="small-field">
+              <label for="tripTime" class="subtitle">Tid</label>
               <input type="time" id="tripTime" class="input-text" name="tripTime" style="width:100px;" required>
+            </div>
             
-              <span class="box-text-line">Passagerare </span>
-              <input type="number" class="input-text" id="passengerCount" min="1" max="999" placeholder="1" required\>
-              
+            <div class="small-field" style="float:right;">
+              <span class="subtitle">Antal passagerare </span>
+              <input type="number" class="input-text" id="passengerCount" min="1" max="999" placeholder="1" style="width:100px; float:right;"required\>
             </div>
             
             <input type="button" id="search-button" value="Sök resa" \>
