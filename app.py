@@ -106,7 +106,7 @@ def get_public_transport_duration(trip):
     # Summing walking time part 1
     time_walking_1 = sum_part_durations(trip, "departureAccessLink", "Walking")
 
-    # Summing walking time part 1
+    # Summing walking time part 2
     time_walking_2 = sum_part_durations(trip, "destinationLink", "Walking")
 
     # Summing all time on buses and trams
@@ -158,6 +158,8 @@ def sum_biking_distances(trip, json_keyword):
         total_distance = matches[0].value if matches else None
 
         return total_distance
+    else:
+        return 0
 
 
 if __name__ == '__main__':
