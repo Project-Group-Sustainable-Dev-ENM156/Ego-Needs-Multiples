@@ -248,6 +248,19 @@ let electricityData = null; // Global variable to store fetched electricity data
 
 // Fetch electricity price data on page load
 document.addEventListener("DOMContentLoaded", async () => {
+    // Set the default date and time (synchronous operation)
+    const now = new Date();
+    
+    // Set the default date (YYYY-MM-DD format)
+    const dateField = document.getElementById('tripDate');
+    const currentDate = now.toISOString().split('T')[0];
+    dateField.value = currentDate;
+
+    // Set the default time (HH:MM format)
+    const timeField = document.getElementById('tripTime');
+    const currentTime = now.toTimeString().split(':').slice(0, 2).join(':');
+    timeField.value = currentTime;
+
     try {
         electricityData = await fetchElectricityData();
         console.log("Electricity price data fetched successfully.");
