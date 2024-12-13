@@ -6,15 +6,6 @@ var time_data = {      // Value should be set by API if possible. Otherwise dist
     public_transport: "notSet",
     car: "notSet"
 };     
-const emissionFactors = {
-    // Average kg co2 emissions per km
-    // Source: https://www.vasttrafik.se/info/statistik/ using the calc for electric buss 30 people and 1 for cars
-    on_foot: 0,
-    bicycle: 0,
-    ICE_car: 182, // Alternative source for cars (not used): https://www.transportstyrelsen.se/sv/om-oss/statistik-och-analys/statistik-inom-vagtrafik/statistik-over-koldioxidutslapp/statistik-over-koldioxidutslapp-2021/
-    electric_car: 58,
-    public_transport: 6,
-};
 
 const p = {
     on_foot: getPrice("on_foot", distance),
@@ -79,7 +70,7 @@ async function createTable(json_data) {
 
     // Populate data asynchronously
     for (const key of Object.keys(p)) {
-        const emissions = get_CO2_emissions(key, emissionFactors, passengers, distance);
+        const emissions = get_CO2_emissions(key, passengers, distance);
         const price = await getPrice(key, distance, passengers); // Await price calculation
         distance = json_data['data']['bike_trip_distance']
         
@@ -89,10 +80,11 @@ async function createTable(json_data) {
         const time = getTime(key, time_data, distance)
         
         console.log("distance ", distance)
+        console.log("time ", time)
         data[key] = {
             emissions: emissions,
             price: price,
-            time: null,
+            time: time,
             rating: 0
         };
     }
@@ -149,7 +141,7 @@ function rate(data) {
             max_time = data[key].time;
         }
       });
-    const max_rating = 0;
+    let max_rating = 0;
     // Find preliminary rating
     Object.keys(data).forEach(key => {
         data[key].rating = emissions_weight * max_emissions / data[key].emissions + price_weight * max_price / data[key].price + time_weight * max_time / data[key].time;
@@ -193,8 +185,19 @@ function calculatePrice(key, data, passengers) {
 
 
 
-function get_CO2_emissions(key, emissionFactors, passengers, distance) {
-    let transportation_method = key
+function get_CO2_emissions(transportation_method, passengers, distance) {
+    // Distance is in meters
+
+    const emissionFactors = {
+        // Average kg co2 emissions per m
+        // Source: https://www.vasttrafik.se/info/statistik/ using the calc for electric buss 30 people and 1 for cars
+        on_foot: 0,
+        bicycle: 0,
+        ICE_car: 0.182, // Alternative source for cars (not used): https://www.transportstyrelsen.se/sv/om-oss/statistik-och-analys/statistik-inom-vagtrafik/statistik-over-koldioxidutslapp/statistik-over-koldioxidutslapp-2021/
+        electric_car: 0.058,
+        public_transport: 0.006,
+    };
+
     // Get the emission factor for the given transportation method
     const factor = emissionFactors[transportation_method];
 
