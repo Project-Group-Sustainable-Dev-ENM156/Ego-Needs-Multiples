@@ -189,7 +189,7 @@ function get_CO2_emissions(transportation_method, passengers, distance) {
     // Distance is in meters
 
     const emissionFactors = {
-        // Average kg co2 emissions per m
+        // Average gg co2 emissions per m
         // Source: https://www.vasttrafik.se/info/statistik/ using the calc for electric buss 30 people and 1 for cars
         on_foot: 0,
         bicycle: 0,
