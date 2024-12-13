@@ -92,7 +92,9 @@ async function createTable() {
         list.removeChild(list.lastChild); // Remove rows except the first one
     }
 
-    Object.entries(data).forEach(([key, value]) => {
+    Object.entries(data)
+    .sort(([, a], [, b]) => b.rating - a.rating) // Sort by rating in descending order
+    .forEach(([key, value]) => {
         const row = document.createElement("tr");
 
         // Create a cell for the key
@@ -100,8 +102,8 @@ async function createTable() {
         keyName.textContent = capitalizeWords(key.replace("_", " ")); // Set the key as the cell content
         row.appendChild(keyName);
 
-        // Create cells for emissions, price, and time
-        ["emissions", "price", "time"].forEach(elem => {
+        // Create cells for emissions, price, time, and rating
+        ["emissions", "price", "time", "rating"].forEach(elem => {
             const cell = document.createElement("td");
             cell.textContent = value[elem]; // Use the value of the property
             cell.setAttribute("id", key + "_" + elem); // Set an ID for the cell
@@ -112,6 +114,7 @@ async function createTable() {
         list.appendChild(row);
     });
 
+
     document.getElementById('results').classList.remove('hidden');
 }
 
@@ -120,9 +123,9 @@ function rate(data) {
     const emissions_weight = ecological / tot;
     const price_weight = economical / tot;
     const time_weight = social / tot;
-    const max_emissions = 0;
-    const max_price = 0;
-    const max_time = 0;
+    let max_emissions = 0;
+    let max_price = 0;
+    let max_time = 0;
     Object.keys(data).forEach(key => {
         if (data[key].emissions > max_emissions) {
             max_emissions = data[key].emissions;
@@ -144,7 +147,9 @@ function rate(data) {
       });
     // Normalize rating to 0-100
     Object.keys(data).forEach(key => {
-        data[key].rating = 100 * data[key].rating / max_rating;
+        data[key].rating = Math.random() * 100;
+        // data[key].rating = 100 * data[key].rating / max_rating;
+        // console.log(data[key].rating);
     });
       
 }
@@ -201,7 +206,6 @@ async function getPrice(transportationMethod, distance, passengers) {
     const FuelConsumption = 8; // Liters per 100 km
     const electricityConsumption = 10; // kWh per 100 km
     const carsRequired = Math.ceil(passengers / 5);
-
     switch (transportationMethod) {
         case "ICE_car":
             const price =  (FuelConsumption / 100) * distance * FuelPrice;
