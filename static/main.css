@@ -150,69 +150,78 @@ aside {
 
 
 
-    /* Style for the range input */
-    input[type="range"] {
-      -webkit-appearance: none; /* Removes default styling */
-      width: 16px; /* Adjust width */
-      height: 400px; /* Adjust height */
-      border: none;
-      outline: none;
-      cursor: pointer;
-      margin-right: 16px;
-      margin-left: 16px;
-      border-radius: 4px;
-    }
+/* Style for the range input */
+input[type="range"] {
+  -webkit-appearance: none; /* Removes default styling */
+  appearance: none; /* Removes default styling for non-WebKit browsers */
+  width: 16px; /* Adjust width */
+  height: 400px; /* Adjust height */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-right: 16px;
+  margin-left: 16px;
+  border-radius: 8px;
+  writing-mode: vertical-lr
+}
 
-    /* Track styling */
-    input[type="range"]::-webkit-slider-runnable-track {
-      width: 100%;
-      height: 100%;
-      background: #F25757;
-      border-radius: 4px;
-    }
+/* Track styling */
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #F25757;
+  border-radius: 16px;
+  width: 24px;
+}
 
-    /* Thumb styling */
-    input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none; /* Remove default thumb styling */
-      appearance: none;
-      width: 16px; /* Thumb width */
-      height: 16px; /* Thumb height */
-      background: #007BFF; /* Thumb color */
-      border-radius: 50%; /* Circular thumb */
-      cursor: pointer;
-      box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-    }
-
-    /* For Firefox */
-    input[type="range"]::-moz-range-thumb {
-      width: 18px;
-      height: 18px;
-      background: #FFFFFF;
-      border-radius: 50%;
-      border: 10px solid #F25757;
-      cursor: pointer;
-    }
-
-    input[type="range"]::-moz-range-track {
-      width: 100%;
-      background: #ddd;
-      border-radius: 8px;
-    }
-
-    input[type="range"]::-ms-track {
-      width: 100%;
-      background: #F25757;
-      border-color: #F25757;
-      border-width: 12px 0;
-      color: #F25757;
-    }
-
-/** FF*/
-input[type="range"]::-moz-range-progress {
-  background-color: #F25757; 
-  width:16px;
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  background: #ddd;
   border-radius: 8px;
 }
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  background: #F25757;
+  border-color: #F25757;
+  border-width: 12px 0;
+  color: #F25757;
+}
+
+/* Thumb styling */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default thumb styling */
+  appearance: none;
+  width: 48px; /* Thumb width */
+  height: 48px; /* Thumb height */
+  background: #FFF; /* Thumb color */
+  border: 14px solid #F25757;
+  border-radius: 50%; /* Circular thumb */
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  border: 10px solid #F25757;
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  background: #007BFF;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Progress bar styling for Firefox */
+input[type="range"]::-moz-range-progress {
+  background-color: #F25757;
+  width: 16px;
+  border-radius: 8px;
+}
+
 
 img {
    margin-top: 8px;
