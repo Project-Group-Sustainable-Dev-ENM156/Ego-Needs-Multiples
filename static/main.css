@@ -93,7 +93,7 @@ h1 {
 }
 
 /* Button to initiate the search. */
-#search-button {
+.search-button {
   width: 100%;
   padding: 16px 20px 16px 20px;
   margin: 24px 0 0 0;
@@ -115,9 +115,7 @@ h1 {
   background-color: #740A00;
   transition: 0.2s;
 }
-.search-button:focus {
-  outline: 2px solid #4E5166;
-}
+
 
 /* Checkbox */
 .passenger-checkbox {
@@ -215,6 +213,8 @@ input[type="range"]::-moz-range-thumb:active {
   border: 10px solid #740A00;
   transition: 0.2s;
 }
+
+
 
 input[type="range"]::-ms-thumb {
   width: 16px;
