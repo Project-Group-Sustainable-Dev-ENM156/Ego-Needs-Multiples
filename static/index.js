@@ -1,5 +1,5 @@
 // Define CO2 emission factors (kg CO2 per km) for different transportation methods
-const distance = 1000    // [m]
+var distance = 0    // [m]
 var time_data = {      // Value should be set by API if possible. Otherwise distance will be used
     walk: "notSet",
     bicycle: "notSet",
@@ -35,7 +35,6 @@ var economical;
 // Event Listener for Form Submission
 document.getElementById('search-button').addEventListener('click', function(event) {
     //event.preventDefault(); // Prevent actual form submission
-
     // Get user input
     startingPoint = document.getElementById('fromDestination').value;
     destination = document.getElementById('toDestination').value;
@@ -67,23 +66,29 @@ document.getElementById('search-button').addEventListener('click', function(even
     .then(data => {
         console.log('Response from backend, ', data);
         // Handle the response from the server here
-
+        createTable(data)
     })
     .catch(error => {
         console.error('Error:', error);
     });
-
-    createTable()
 });
 
-async function createTable() {
+async function createTable(json_data) {
     const data = {};
+    console.log("json_data ", json_data)
 
     // Populate data asynchronously
     for (const key of Object.keys(p)) {
         const emissions = get_CO2_emissions(key, emissionFactors, passengers, distance);
         const price = await getPrice(key, distance, passengers); // Await price calculation
+        distance = json_data['data']['bike_trip_distance']
+        
+        time_data['public_transport'] = json_data['data']['public_transport_trip_duration']
+        time_data['bicycle'] = json_data['data']['bike_trip_duration']
+
         const time = getTime(key, time_data, distance)
+        
+        console.log("distance ", distance)
         data[key] = {
             emissions: emissions,
             price: price,
@@ -296,6 +301,19 @@ let electricityData = null; // Global variable to store fetched electricity data
 
 // Fetch electricity price data on page load
 document.addEventListener("DOMContentLoaded", async () => {
+    // Set the default date and time (synchronous operation)
+    const now = new Date();
+    
+    // Set the default date (YYYY-MM-DD format)
+    const dateField = document.getElementById('tripDate');
+    const currentDate = now.toISOString().split('T')[0];
+    dateField.value = currentDate;
+
+    // Set the default time (HH:MM format)
+    const timeField = document.getElementById('tripTime');
+    const currentTime = now.toTimeString().split(':').slice(0, 2).join(':');
+    timeField.value = currentTime;
+
     try {
         electricityData = await fetchElectricityData();
         console.log("Electricity price data fetched successfully.");
