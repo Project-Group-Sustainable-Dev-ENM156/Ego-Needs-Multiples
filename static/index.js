@@ -221,6 +221,7 @@ function getSelectedTicket() {
 
 // Price calculation function
 async function getPrice(transportationMethod, distance, passengers) {
+    distance = distance/1000;
     // Variables
     const FuelPrice = 17; // Fuel price per liter (kr)
     const FuelConsumption = 8; // Liters per 100 km
@@ -232,11 +233,11 @@ async function getPrice(transportationMethod, distance, passengers) {
         case "ICE_car":
             const price =  (FuelConsumption / 100) * distance * FuelPrice;
             const totalPrice = carsRequired * price;
-            return Math.round(totalPrice / passengers);
+            return Number((totalPrice / passengers).toFixed(2));
         case "electric_car":
             const price1 = await elektroShock(distance, 0);
             const totalPrice2 = carsRequired * price1;
-            return Math.round(totalPrice2 / passengers);
+            return Number((totalPrice2 / passengers).toFixed(2));
         case "public_transport":
             switch (ticket) {
                 case "pb":
