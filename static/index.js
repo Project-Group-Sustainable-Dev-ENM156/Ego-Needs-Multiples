@@ -144,15 +144,15 @@ function rate(data) {
     let max_rating = 0;
     // Find preliminary rating
     Object.keys(data).forEach(key => {
-        data[key].rating = emissions_weight * max_emissions / data[key].emissions + price_weight * max_price / data[key].price + time_weight * max_time / data[key].time;
+        data[key].rating = emissions_weight * max_emissions / Math.max(data[key].emissions, 1) + price_weight * max_price / Math.max(data[key].price, 1) + time_weight * max_time / data[key].time;
         if (data[key].rating > max_rating) {
             max_rating = data[key].rating;
         }
       });
     // Normalize rating to 0-100
     Object.keys(data).forEach(key => {
-        data[key].rating = Math.random() * 100;
-        // data[key].rating = 100 * data[key].rating / max_rating;
+        // data[key].rating = Math.random() * 100;
+        data[key].rating = 100 * data[key].rating / max_rating;
         // console.log(data[key].rating);
     });
       
