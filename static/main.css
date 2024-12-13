@@ -207,6 +207,15 @@ input[type="range"]::-moz-range-thumb {
   cursor: pointer;
 }
 
+input[type="range"]::-moz-range-thumb:hover {
+  border: 10px solid #AD002D;
+  transition: 0.2s;
+}
+input[type="range"]::-moz-range-thumb:active {
+  border: 10px solid #740A00;
+  transition: 0.2s;
+}
+
 input[type="range"]::-ms-thumb {
   width: 16px;
   height: 16px;
