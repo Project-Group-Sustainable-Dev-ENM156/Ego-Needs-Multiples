@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify, render_template
 from test5empty import get_trip_data
 from location2search import get_location_data
+from jsonpath_ng import jsonpath, parse
+import json
 
 app = Flask(__name__)
 
@@ -35,8 +37,17 @@ def submit_trip():
     data = get_trip_data(pos, trip_data['date'], trip_data['time'])
     #print('Estimated duration in minutes: ', data['results'][0]['tripLegs'][0]['estimatedDurationInMinutes'])
     # Example: Respond with a confirmation
-    print("AAAA ", data)
-    return jsonify({'message': 'Trip data received successfully!', 'data': data})
+    #print("AAAA ", data)
+    public_transport_trip_duration = find_public_transport_trip(data)
+    bike_trip_duration, bike_trip_distance = find_bike_trip(data)
+
+    response_data = {
+        "public_transport_trip_duration": public_transport_trip_duration,
+        "bike_trip_duration": bike_trip_duration,
+        "bike_trip_distance": bike_trip_distance
+    }
+
+    return jsonify({'message': 'Trip data received successfully!', 'data': response_data})
 
 def get_lat_long_by_name(arr, name):
     print("NAME ", name)
@@ -65,6 +76,90 @@ def print_list(arr):
             print(location['name'])
     else:
         print("No results found.")
+
+def find_bike_trip(data):
+    bike_trip = data["results"][0]
+    total_trip_time = sum_part_durations(bike_trip, "destinationLink", "Biking")
+    total_distance = sum_biking_distances(bike_trip, "destinationLink")
+
+    print("Bike trip duration: ", total_trip_time)
+    print("Bike trip distance: ", total_distance)
+    return total_trip_time, total_distance
+
+def find_public_transport_trip(data):
+    # Get all results
+    # Error handling here?
+    all_trips = data.get("results", [])
+    #print("Number of results: ", len(all_trips))
+    shortest_trip_duration = 1000
+
+    # Loop over all trips except for the first trip, since it is a bike trip
+    for trip in all_trips[1:]:
+        current_trip_duration = get_public_transport_duration(trip)
+        if current_trip_duration < shortest_trip_duration:
+            shortest_trip_duration = current_trip_duration
+    
+    print("Public transport trip duration: ", shortest_trip_duration)
+    return shortest_trip_duration
+    
+def get_public_transport_duration(trip):
+    # Summing walking time part 1
+    time_walking_1 = sum_part_durations(trip, "departureAccessLink", "Walking")
+
+    # Summing walking time part 2
+    time_walking_2 = sum_part_durations(trip, "destinationLink", "Walking")
+
+    # Summing all time on buses and trams
+    total_time_bus_tram = sum_part_durations(trip, "tripLegs", "Public transport")
+
+    # Summing all time waiting for connections
+    """ if "connectionLinks" in trip:
+        waiting_reference = trip["connectionLinks"]
+        
+        # Use jsonpath to find all instances of "plannedDurationInMinutes"
+        jsonpath_expr = parse("$..plannedDurationInMinutes")
+        time_waiting = [match.value for match in jsonpath_expr.find(waiting_reference)]
+        
+        # Sum the durations
+        total_time_waiting = sum(time_waiting)
+        print("Minutes for waiting: ", total_time_waiting)
+    else:
+        total_time_waiting = 0
+        print("No time spent waiting on this trip, i.e, connectionLinks not found in results[1].") """
+
+    # Sum all durations
+    total_trip_time = time_walking_1 + time_walking_2 + total_time_bus_tram #+ total_time_waiting
+    #print("Total trip time: ", total_trip_time)
+
+    return total_trip_time
+
+def sum_part_durations(trip, json_keyword, transportation_mode):
+    if json_keyword in trip:
+        reference = trip[json_keyword]
+        
+        # Use jsonpath to find all instances of "plannedDurationInMinutes" and "plannedConnectingTimeInMinutes"
+        jsonpath_expr = parse("$..plannedDurationInMinutes")
+        jsonpath_expr_2 = parse("$..plannedConnectingTimeInMinutes")
+        time_instances = [match.value for match in jsonpath_expr.find(reference)] + [match.value for match in jsonpath_expr_2.find(reference)]
+        total_time = sum(time_instances)
+        # Sum the durations
+        #print(transportation_mode, " minutes: ", total_time)
+        return total_time
+    else:
+        #print("No time spent on ", transportation_mode)
+        return 0
+    
+def sum_biking_distances(trip, json_keyword):
+    if json_keyword in trip:
+        reference = trip[json_keyword]
+
+        jsonpath_expr = parse("$..distanceInMeters")
+        matches = jsonpath_expr.find(reference)
+        total_distance = matches[0].value if matches else None
+
+        return total_distance
+    else:
+        return 0
 
 
 if __name__ == '__main__':
