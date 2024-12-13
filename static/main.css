@@ -162,7 +162,6 @@ input[type="range"] {
   margin-right: 16px;
   margin-left: 16px;
   border-radius: 8px;
-  writing-mode: vertical-lr
 }
 
 /* Track styling */
@@ -170,6 +169,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   background: #F25757;
   border-radius: 16px;
   width: 24px;
+  writing-mode: vertical-lr
 }
 
 input[type="range"]::-moz-range-track {
