@@ -152,7 +152,7 @@ function rate(data) {
     // Normalize rating to 0-100
     Object.keys(data).forEach(key => {
         // data[key].rating = Math.random() * 100;
-        data[key].rating = 100 * data[key].rating / max_rating;
+        data[key].rating = Math.round(100 * data[key].rating / max_rating);
         // console.log(data[key].rating);
     });
       
