@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template
-from test5empty import get_trip_data
-from location2search import get_location_data
+from journeyFromLocation import get_trip_data
+from locationFromQuery import get_location_data
 from jsonpath_ng import jsonpath, parse
 import json
 

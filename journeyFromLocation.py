@@ -1,9 +1,10 @@
 import requests
 import json
+import os
 
 # Your Västtrafik credentials
-client_id = ''
-client_secret = ''
+client_id = os.getenv('CLIENT_ID')
+client_secret = os.getenv('CLIENT_SECRET')
 auth_url = 'https://ext-api.vasttrafik.se/token'
 api_url = 'https://ext-api.vasttrafik.se/pr/v4/journeys'
 
