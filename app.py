@@ -1,3 +1,4 @@
+import math
 from flask import Flask, request, jsonify, render_template
 from journeyFromLocation import get_trip_data
 from locationFromQuery import get_location_data
@@ -141,7 +142,7 @@ def sum_part_durations(trip, json_keyword, transportation_mode):
         jsonpath_expr = parse("$..plannedDurationInMinutes")
         jsonpath_expr_2 = parse("$..plannedConnectingTimeInMinutes")
         time_instances = [match.value for match in jsonpath_expr.find(reference)] + [match.value for match in jsonpath_expr_2.find(reference)]
-        total_time = sum(time_instances)
+        total_time = sum(abs(time) for time in time_instances)
         # Sum the durations
         #print(transportation_mode, " minutes: ", total_time)
         return total_time
