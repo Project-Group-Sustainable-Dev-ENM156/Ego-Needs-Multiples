@@ -288,6 +288,7 @@ function getTime(transportationMethod, time_data, distance){
             else if(distance != undefined){
                 time += Math.round(distance/avg_driving_speed)
             }
+            break
         case "public_transport":
             if(time_data["public_transport"] != "notSet"){
                 time += Math.round(parseFloat(time_data["public_transport"]))
@@ -295,6 +296,7 @@ function getTime(transportationMethod, time_data, distance){
             else if(distance != undefined){
                 time += Math.round(distance/avg_public_transport_speed)
             }
+            break
         case "bicycle":
             time += minimum_bicycle_time
             if(time_data["bicycle"] != "notSet"){
@@ -303,6 +305,7 @@ function getTime(transportationMethod, time_data, distance){
             else if(distance != undefined){
                 time += Math.round(distance/avg_biking_speed)
             }
+            break
         case "on_foot":
             if(time_data["walk"] != "notSet"){
                 time += Math.round(parseFloat(time_data["walk"]))
@@ -310,6 +313,7 @@ function getTime(transportationMethod, time_data, distance){
             else if(distance != undefined){
                 time += Math.round(distance/avg_walking_speed)
             }
+            break
         default:
             throw new Error(`Invalid transportation method: ${transportationMethod}`);
     }
