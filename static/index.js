@@ -261,39 +261,47 @@ function getTime(transportationMethod, time_data, distance){
     const avg_public_transport_speed = 9 * 16.67
     const avg_driving_speed = 25 * 16.67
 
+    const minimum_bicycle_time = 2  // Time for walking to the bike, unlocking, parking and locking.
+    const minimum_car_time = 2      // Time for walking to the car, unlocking, sitting, parking, locking.
+
+    let time = 0
+
     switch (transportationMethod) {
         case "ICE_car":
         case "electric_car":
+            time += minimum_car_time
             if(time_data["car"] != "notSet"){
-                return Math.round(parseFloat(time_data["car"]))
+                time += Math.round(parseFloat(time_data["car"]))
             }
             else if(distance != undefined){
-                return Math.round(distance/avg_driving_speed)
+                time += Math.round(distance/avg_driving_speed)
             }
         case "public_transport":
             if(time_data["public_transport"] != "notSet"){
-                return Math.round(parseFloat(time_data["public_transport"]))
+                time += Math.round(parseFloat(time_data["public_transport"]))
             }
             else if(distance != undefined){
-                return Math.round(distance/avg_public_transport_speed)
+                time += Math.round(distance/avg_public_transport_speed)
             }
         case "bicycle":
+            time += minimum_bicycle_time
             if(time_data["bicycle"] != "notSet"){
-                return Math.round(parseFloat(time_data["bicycle"]))
+                time += Math.round(parseFloat(time_data["bicycle"]))
             }
             else if(distance != undefined){
-                return Math.round(distance/avg_biking_speed)
+                time += Math.round(distance/avg_biking_speed)
             }
         case "on_foot":
             if(time_data["walk"] != "notSet"){
-                return Math.round(parseFloat(time_data["walk"]))
+                time += Math.round(parseFloat(time_data["walk"]))
             }
             else if(distance != undefined){
-                return Math.round(distance/avg_walking_speed)
+                time += Math.round(distance/avg_walking_speed)
             }
         default:
             throw new Error(`Invalid transportation method: ${transportationMethod}`);
     }
+    return time
 }
 
 // ONLY ELECTRICIANS MAY ENTER!
