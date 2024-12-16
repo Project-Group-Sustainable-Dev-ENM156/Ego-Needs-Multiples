@@ -16,10 +16,10 @@ const p = {
 };
 
 const units = {
-  emissions: " g",
-  price: " kr",
-  time: " min",
-  rating: "%"
+  emissions: " g ",
+  price: " kr ",
+  time: " min ",
+  rating: "% "
 };
 
 var startingPoint;

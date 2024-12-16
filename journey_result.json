@@ -1,8 +1,8 @@
 {
     "results": [
         {
-            "reconstructionReference": "¶HKI¶G@B$A=1@O=Studiegången, Göteborg@L=7160000@a=0@$A=1@O=Chalmers, Göteborg@L=1960000@a=0@$202412161435$202412161502$$$1$$$$$$¶GP¶ft@0@2000@120@1@100@1@0@0@@@@@false@0@-1@0@-1@-1@@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@0@0@@@@@false@0@-1@0@-1@-1@@$f@$f@$f@$f@$f@$§tt@0@2000@120@1@100@1@0@0@@@@@false@0@-1@0@-1@-1@@$t@0@20000@120@1@100@1@0@0@@@@@false@0@-1@0@-1@-1@@$f@$f@$f@$f@$§",
-            "detailsReference": "eyJUIjpbXSwiTCI6Ikd8MXxHQEJ8QT0xQE89U3R1ZGllZ8OlbmdlbiwgR8O2dGVib3JnQEw9NzE2MDAwMEBhPTBAfEE9MUBPPUNoYWxtZXJzLCBHw7Z0ZWJvcmdATD0xOTYwMDAwQGE9MEB8MTYxMjIwMjR8MTQzNTEwfDE1MDIxMHxmdHxmdEAwQDIwMDBAMTIwQDFAMTAwQDFAMEAwQEBAQEBmYWxzZUAwQC0xQDBALTFALTFAQCRmQCRmQCRmQCRmQCRmQCTCp2J0QDBAMjAwMEAxMjBAMUAxMDBAMUAwQDBAQEBAQGZhbHNlQDBALTFAMEAtMUAtMUBAJGZAJGZAJGZAJGZAJGZAJMKndHRAMEAyMDAwQDEyMEAxQDEwMEAxQDBAMEBAQEBAZmFsc2VAMEAtMUAwQC0xQC0xQEAkdEAwQDIwMDAwQDEyMEAxQDEwMEAxQDBAMEBAQEBAZmFsc2VAMEAtMUAwQC0xQC0xQEAkZkAkZkAkZkAkZkAkwqd8fHx8In0",
+            "reconstructionReference": "¶HKI¶G@B$A=1@O=Studiegången, Göteborg@L=7160000@a=0@$A=1@O=Chalmers, Göteborg@L=1960000@a=0@$202412161436$202412161503$$$1$$$$$$¶GP¶ft@0@2000@120@1@100@1@0@0@@@@@false@0@-1@0@-1@-1@@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@0@0@@@@@false@0@-1@0@-1@-1@@$f@$f@$f@$f@$f@$§tt@0@2000@120@1@100@1@0@0@@@@@false@0@-1@0@-1@-1@@$t@0@20000@120@1@100@1@0@0@@@@@false@0@-1@0@-1@-1@@$f@$f@$f@$f@$§",
+            "detailsReference": "eyJUIjpbXSwiTCI6Ikd8MXxHQEJ8QT0xQE89U3R1ZGllZ8OlbmdlbiwgR8O2dGVib3JnQEw9NzE2MDAwMEBhPTBAfEE9MUBPPUNoYWxtZXJzLCBHw7Z0ZWJvcmdATD0xOTYwMDAwQGE9MEB8MTYxMjIwMjR8MTQzNjI0fDE1MDMyNHxmdHxmdEAwQDIwMDBAMTIwQDFAMTAwQDFAMEAwQEBAQEBmYWxzZUAwQC0xQDBALTFALTFAQCRmQCRmQCRmQCRmQCRmQCTCp2J0QDBAMjAwMEAxMjBAMUAxMDBAMUAwQDBAQEBAQGZhbHNlQDBALTFAMEAtMUAtMUBAJGZAJGZAJGZAJGZAJGZAJMKndHRAMEAyMDAwQDEyMEAxQDEwMEAxQDBAMEBAQEBAZmFsc2VAMEAtMUAwQC0xQC0xQEAkdEAwQDIwMDAwQDEyMEAxQDEwMEAxQDBAMEBAQEBAZmFsc2VAMEAtMUAwQC0xQC0xQEAkZkAkZkAkZkAkZkAkwqd8fHx8In0",
             "destinationLink": {
                 "transportMode": "bike",
                 "transportSubMode": "none",
@@ -12,8 +12,8 @@
                     "locationType": "stoparea",
                     "latitude": 57.714406,
                     "longitude": 12.039585,
-                    "plannedTime": "2024-12-16T14:35:10.0000000+01:00",
-                    "estimatedOtherwisePlannedTime": "2024-12-16T14:35:10.0000000+01:00",
+                    "plannedTime": "2024-12-16T14:36:24.0000000+01:00",
+                    "estimatedOtherwisePlannedTime": "2024-12-16T14:36:24.0000000+01:00",
                     "notes": []
                 },
                 "destination": {
@@ -22,14 +22,14 @@
                     "locationType": "stoparea",
                     "latitude": 57.69,
                     "longitude": 11.972957,
-                    "plannedTime": "2024-12-16T15:02:10.0000000+01:00",
-                    "estimatedOtherwisePlannedTime": "2024-12-16T15:02:10.0000000+01:00",
+                    "plannedTime": "2024-12-16T15:03:24.0000000+01:00",
+                    "estimatedOtherwisePlannedTime": "2024-12-16T15:03:24.0000000+01:00",
                     "notes": []
                 },
                 "notes": [],
                 "distanceInMeters": 6579,
-                "plannedDepartureTime": "2024-12-16T14:35:10.0000000+01:00",
-                "plannedArrivalTime": "2024-12-16T15:02:10.0000000+01:00",
+                "plannedDepartureTime": "2024-12-16T14:36:24.0000000+01:00",
+                "plannedArrivalTime": "2024-12-16T15:03:24.0000000+01:00",
                 "plannedDurationInMinutes": 27,
                 "linkCoordinates": [
                     {
@@ -2228,7 +2228,7 @@
             }
         },
         {
-            "reconstructionReference": "¶HKI¶T$A=1@O=Studiegången, Göteborg@L=7160001@a=128@$A=1@O=Redbergsplatsen, Göteborg@L=5460005@a=128@$202412161435$202412161444$Bus   17$$1$$$$$$§W$A=1@O=Redbergsplatsen, Göteborg@L=5460005@a=128@$A=1@O=Redbergsplatsen, Göteborg@L=5460003@a=128@$202412161444$202412161447$$$1$$$$$$§T$A=1@O=Redbergsplatsen, Göteborg@L=5460003@a=128@$A=1@O=Chalmers, Göteborg@L=1960002@a=128@$202412161452$202412161506$Spå    8$$1$$$$$$¶KC¶#VE#2#CF#100#CA#0#CM#0#SICT#0#AM#97#AM2#0#RT#15#¶KRCC¶#VE#1#",
+            "reconstructionReference": "¶HKI¶T$A=1@O=Studiegången, Göteborg@L=7160001@a=128@$A=1@O=Redbergsplatsen, Göteborg@L=5460005@a=128@$202412161435$202412161444$Bus   17$$1$$$$$$§W$A=1@O=Redbergsplatsen, Göteborg@L=5460005@a=128@$A=1@O=Redbergsplatsen, Göteborg@L=5460003@a=128@$202412161444$202412161447$$$1$$$$$$§T$A=1@O=Redbergsplatsen, Göteborg@L=5460003@a=128@$A=1@O=Chalmers, Göteborg@L=1960002@a=128@$202412161452$202412161506$Spå    8$$1$$$$$$¶KC¶#VE#2#CF#100#CA#0#CM#0#SICT#0#AM#97#AM2#0#RT#15#¶KRCC¶#VE#1#VOLL#IST#",
             "detailsReference": "eyJUIjpbeyJSIjoiMXwxNzMyfDMzfDgwfDE2MTIyMDI0IiwiTyI6NSwiRCI6MTAsIkkiOjB9LHsiUiI6IjF8MTUyMTl8MHw4MHwxNjEyMjAyNCIsIk8iOjYsIkQiOjEzLCJJIjoyfV0sIkMiOlt7IlIiOiJIfDF8VyRBPTFATz1SZWRiZXJnc3BsYXRzZW4sIEfDtnRlYm9yZ0BMPTU0NjAwMDVAYT0xMjhAJEE9MUBPPVJlZGJlcmdzcGxhdHNlbiwgR8O2dGVib3JnQEw9NTQ2MDAwM0BhPTEyOEAkMjAyNDEyMTYxNDQ0JDIwMjQxMjE2MTQ0NyQkJDEkJCQkJCR8I1ZFIzIjQ0YjMTAwI0NBIzAjQ00jMCNTSUNUIzAjQU0jOTcjQU0yIzAjUlQjMTUjIiwiSSI6MX1dfQ",
             "tripLegs": [
                 {
@@ -2251,8 +2251,8 @@
                             }
                         },
                         "plannedTime": "2024-12-16T14:35:00.0000000+01:00",
-                        "estimatedTime": "2024-12-16T14:40:00.0000000+01:00",
-                        "estimatedOtherwisePlannedTime": "2024-12-16T14:40:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T14:39:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T14:39:00.0000000+01:00",
                         "notes": []
                     },
                     "destination": {
@@ -2304,11 +2304,11 @@
                     "plannedDepartureTime": "2024-12-16T14:35:00.0000000+01:00",
                     "plannedArrivalTime": "2024-12-16T14:44:00.0000000+01:00",
                     "plannedDurationInMinutes": 9,
-                    "estimatedDepartureTime": "2024-12-16T14:40:00.0000000+01:00",
+                    "estimatedDepartureTime": "2024-12-16T14:39:00.0000000+01:00",
                     "estimatedArrivalTime": "2024-12-16T14:47:00.0000000+01:00",
-                    "estimatedDurationInMinutes": 7,
+                    "estimatedDurationInMinutes": 8,
                     "estimatedOtherwisePlannedArrivalTime": "2024-12-16T14:47:00.0000000+01:00",
-                    "estimatedOtherwisePlannedDepartureTime": "2024-12-16T14:40:00.0000000+01:00",
+                    "estimatedOtherwisePlannedDepartureTime": "2024-12-16T14:39:00.0000000+01:00",
                     "journeyLegIndex": 0
                 },
                 {
@@ -2331,8 +2331,8 @@
                             }
                         },
                         "plannedTime": "2024-12-16T14:52:00.0000000+01:00",
-                        "estimatedTime": "2024-12-16T14:52:00.0000000+01:00",
-                        "estimatedOtherwisePlannedTime": "2024-12-16T14:52:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T14:53:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T14:53:00.0000000+01:00",
                         "notes": []
                     },
                     "destination": {
@@ -2382,16 +2382,16 @@
                     },
                     "notes": [],
                     "plannedConnectingTimeInMinutes": 8,
-                    "estimatedConnectingTimeInMinutes": 5,
+                    "estimatedConnectingTimeInMinutes": 6,
                     "isRiskOfMissingConnection": false,
                     "plannedDepartureTime": "2024-12-16T14:52:00.0000000+01:00",
                     "plannedArrivalTime": "2024-12-16T15:06:00.0000000+01:00",
                     "plannedDurationInMinutes": 14,
-                    "estimatedDepartureTime": "2024-12-16T14:52:00.0000000+01:00",
+                    "estimatedDepartureTime": "2024-12-16T14:53:00.0000000+01:00",
                     "estimatedArrivalTime": "2024-12-16T15:06:00.0000000+01:00",
-                    "estimatedDurationInMinutes": 14,
+                    "estimatedDurationInMinutes": 13,
                     "estimatedOtherwisePlannedArrivalTime": "2024-12-16T15:06:00.0000000+01:00",
-                    "estimatedOtherwisePlannedDepartureTime": "2024-12-16T14:52:00.0000000+01:00",
+                    "estimatedOtherwisePlannedDepartureTime": "2024-12-16T14:53:00.0000000+01:00",
                     "journeyLegIndex": 2
                 }
             ],
@@ -2979,6 +2979,257 @@
             "isDeparted": false
         },
         {
+            "reconstructionReference": "¶HKI¶T$A=1@O=Studiegången, Göteborg@L=7160001@a=128@$A=1@O=Redbergsplatsen, Göteborg@L=5460005@a=128@$202412161455$202412161504$Bus   17$$1$$$$$$§W$A=1@O=Redbergsplatsen, Göteborg@L=5460005@a=128@$A=1@O=Redbergsplatsen, Göteborg@L=5460003@a=128@$202412161504$202412161507$$$1$$$$$$§T$A=1@O=Redbergsplatsen, Göteborg@L=5460003@a=128@$A=1@O=Chalmers, Göteborg@L=1960002@a=128@$202412161505$202412161519$Spå    6$$1$$$$$$¶KC¶#VE#2#CF#100#CA#0#CM#0#SICT#0#AM#97#AM2#0#RT#15#¶KRCC¶#VE#1#VOLL#IST#",
+            "detailsReference": "eyJUIjpbeyJSIjoiMXwxNzE5fDF8ODB8MTYxMjIwMjQiLCJPIjo1LCJEIjoxMCwiSSI6MH0seyJSIjoiMXwzNjc5OXwwfDgwfDE2MTIyMDI0IiwiTyI6MTIsIkQiOjE5LCJJIjoyfV0sIkMiOlt7IlIiOiJIfDF8VyRBPTFATz1SZWRiZXJnc3BsYXRzZW4sIEfDtnRlYm9yZ0BMPTU0NjAwMDVAYT0xMjhAJEE9MUBPPVJlZGJlcmdzcGxhdHNlbiwgR8O2dGVib3JnQEw9NTQ2MDAwM0BhPTEyOEAkMjAyNDEyMTYxNTA0JDIwMjQxMjE2MTUwNyQkJDEkJCQkJCR8I1ZFIzIjQ0YjMTAwI0NBIzAjQ00jMCNTSUNUIzAjQU0jOTcjQU0yIzAjUlQjMTUjIiwiSSI6MX1dfQ",
+            "tripLegs": [
+                {
+                    "origin": {
+                        "stopPoint": {
+                            "gid": "9022014007160001",
+                            "name": "Studiegången, Göteborg",
+                            "platform": "A",
+                            "stopArea": {
+                                "gid": "9021014007160000",
+                                "name": "Studiegången",
+                                "latitude": 57.71440959,
+                                "longitude": 12.0395869,
+                                "tariffZone1": {
+                                    "gid": "9081014200003000",
+                                    "name": "Zon A",
+                                    "number": 3000,
+                                    "shortName": "A"
+                                }
+                            }
+                        },
+                        "plannedTime": "2024-12-16T14:55:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T14:56:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T14:56:00.0000000+01:00",
+                        "notes": []
+                    },
+                    "destination": {
+                        "stopPoint": {
+                            "gid": "9022014005460005",
+                            "name": "Redbergsplatsen, Göteborg",
+                            "platform": "E",
+                            "stopArea": {
+                                "gid": "9021014005460000",
+                                "name": "Redbergsplatsen",
+                                "latitude": 57.71642259,
+                                "longitude": 12.00482456,
+                                "tariffZone1": {
+                                    "gid": "9081014200003000",
+                                    "name": "Zon A",
+                                    "number": 3000,
+                                    "shortName": "A"
+                                }
+                            }
+                        },
+                        "plannedTime": "2024-12-16T15:04:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T15:03:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T15:03:00.0000000+01:00",
+                        "notes": []
+                    },
+                    "isCancelled": false,
+                    "isPartCancelled": false,
+                    "serviceJourney": {
+                        "gid": "9015014501700142",
+                        "direction": "Tuve",
+                        "directionDetails": {
+                            "fullDirection": "Tuve",
+                            "shortDirection": "Tuve"
+                        },
+                        "number": "142",
+                        "line": {
+                            "shortName": "17",
+                            "designation": "17",
+                            "isWheelchairAccessible": true,
+                            "name": "Buss 17",
+                            "backgroundColor": "#00008e",
+                            "foregroundColor": "#ffff50",
+                            "borderColor": "#00008e",
+                            "transportMode": "bus",
+                            "transportSubMode": "none"
+                        }
+                    },
+                    "notes": [],
+                    "plannedDepartureTime": "2024-12-16T14:55:00.0000000+01:00",
+                    "plannedArrivalTime": "2024-12-16T15:04:00.0000000+01:00",
+                    "plannedDurationInMinutes": 9,
+                    "estimatedDepartureTime": "2024-12-16T14:56:00.0000000+01:00",
+                    "estimatedArrivalTime": "2024-12-16T15:03:00.0000000+01:00",
+                    "estimatedDurationInMinutes": 7,
+                    "estimatedOtherwisePlannedArrivalTime": "2024-12-16T15:03:00.0000000+01:00",
+                    "estimatedOtherwisePlannedDepartureTime": "2024-12-16T14:56:00.0000000+01:00",
+                    "journeyLegIndex": 0
+                },
+                {
+                    "origin": {
+                        "stopPoint": {
+                            "gid": "9022014005460003",
+                            "name": "Redbergsplatsen, Göteborg",
+                            "platform": "C",
+                            "stopArea": {
+                                "gid": "9021014005460000",
+                                "name": "Redbergsplatsen",
+                                "latitude": 57.71642259,
+                                "longitude": 12.00482456,
+                                "tariffZone1": {
+                                    "gid": "9081014200003000",
+                                    "name": "Zon A",
+                                    "number": 3000,
+                                    "shortName": "A"
+                                }
+                            }
+                        },
+                        "plannedTime": "2024-12-16T15:05:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T15:06:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T15:06:00.0000000+01:00",
+                        "notes": []
+                    },
+                    "destination": {
+                        "stopPoint": {
+                            "gid": "9022014001960002",
+                            "name": "Chalmers, Göteborg",
+                            "platform": "B",
+                            "stopArea": {
+                                "gid": "9021014001960000",
+                                "name": "Chalmers",
+                                "latitude": 57.69000378,
+                                "longitude": 11.97295362,
+                                "tariffZone1": {
+                                    "gid": "9081014200003000",
+                                    "name": "Zon A",
+                                    "number": 3000,
+                                    "shortName": "A"
+                                }
+                            }
+                        },
+                        "plannedTime": "2024-12-16T15:19:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T15:20:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T15:20:00.0000000+01:00",
+                        "notes": []
+                    },
+                    "isCancelled": false,
+                    "isPartCancelled": false,
+                    "serviceJourney": {
+                        "gid": "9015014500605500",
+                        "direction": "Länsmansgården via Sahlgrenska",
+                        "directionDetails": {
+                            "fullDirection": "Länsmansgården via Sahlgrenska",
+                            "shortDirection": "Länsmansgården",
+                            "via": "Sahlgrenska"
+                        },
+                        "number": "5500",
+                        "line": {
+                            "shortName": "6",
+                            "designation": "6",
+                            "isWheelchairAccessible": true,
+                            "name": "Spårvagn 6",
+                            "backgroundColor": "#f89828",
+                            "foregroundColor": "#00435c",
+                            "borderColor": "#f89828",
+                            "transportMode": "tram",
+                            "transportSubMode": "none"
+                        }
+                    },
+                    "notes": [],
+                    "plannedConnectingTimeInMinutes": 1,
+                    "estimatedConnectingTimeInMinutes": 3,
+                    "isRiskOfMissingConnection": false,
+                    "plannedDepartureTime": "2024-12-16T15:05:00.0000000+01:00",
+                    "plannedArrivalTime": "2024-12-16T15:19:00.0000000+01:00",
+                    "plannedDurationInMinutes": 14,
+                    "estimatedDepartureTime": "2024-12-16T15:06:00.0000000+01:00",
+                    "estimatedArrivalTime": "2024-12-16T15:20:00.0000000+01:00",
+                    "estimatedDurationInMinutes": 14,
+                    "estimatedOtherwisePlannedArrivalTime": "2024-12-16T15:20:00.0000000+01:00",
+                    "estimatedOtherwisePlannedDepartureTime": "2024-12-16T15:06:00.0000000+01:00",
+                    "journeyLegIndex": 2
+                }
+            ],
+            "connectionLinks": [
+                {
+                    "journeyLegIndex": 1,
+                    "transportMode": "walk",
+                    "transportSubMode": "none",
+                    "origin": {
+                        "stopPoint": {
+                            "gid": "9022014005460005",
+                            "name": "Redbergsplatsen, Göteborg",
+                            "platform": "E",
+                            "stopArea": {
+                                "gid": "9021014005460000",
+                                "name": "Redbergsplatsen",
+                                "latitude": 57.71642259,
+                                "longitude": 12.00482456,
+                                "tariffZone1": {
+                                    "gid": "9081014200003000",
+                                    "name": "Zon A",
+                                    "number": 3000,
+                                    "shortName": "A"
+                                }
+                            }
+                        },
+                        "plannedTime": "2024-12-16T15:04:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T15:03:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T15:03:00.0000000+01:00",
+                        "notes": []
+                    },
+                    "destination": {
+                        "stopPoint": {
+                            "gid": "9022014005460003",
+                            "name": "Redbergsplatsen, Göteborg",
+                            "platform": "C",
+                            "stopArea": {
+                                "gid": "9021014005460000",
+                                "name": "Redbergsplatsen",
+                                "latitude": 57.71642259,
+                                "longitude": 12.00482456,
+                                "tariffZone1": {
+                                    "gid": "9081014200003000",
+                                    "name": "Zon A",
+                                    "number": 3000,
+                                    "shortName": "A"
+                                }
+                            }
+                        },
+                        "plannedTime": "2024-12-16T15:07:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T15:06:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T15:06:00.0000000+01:00",
+                        "notes": []
+                    },
+                    "notes": [],
+                    "distanceInMeters": 13,
+                    "plannedDepartureTime": "2024-12-16T15:04:00.0000000+01:00",
+                    "plannedArrivalTime": "2024-12-16T15:07:00.0000000+01:00",
+                    "plannedDurationInMinutes": 3,
+                    "estimatedDepartureTime": "2024-12-16T15:03:00.0000000+01:00",
+                    "estimatedArrivalTime": "2024-12-16T15:06:00.0000000+01:00",
+                    "estimatedDurationInMinutes": 3,
+                    "estimatedNumberOfSteps": 20,
+                    "linkCoordinates": [
+                        {
+                            "latitude": 57.716311,
+                            "longitude": 12.004366
+                        },
+                        {
+                            "latitude": 57.716293,
+                            "longitude": 12.004375
+                        },
+                        {
+                            "latitude": 57.716284,
+                            "longitude": 12.004501
+                        },
+                        {
+                            "latitude": 57.716257,
+                            "longitude": 12.004501
+                        }
+                    ]
+                }
+            ],
+            "isDeparted": false
+        },
+        {
             "reconstructionReference": "¶HKI¶T$A=1@O=Studiegången, Göteborg@L=7160001@a=128@$A=1@O=Redbergsplatsen, Göteborg@L=5460005@a=128@$202412161455$202412161504$Bus   17$$1$$$$$$§W$A=1@O=Redbergsplatsen, Göteborg@L=5460005@a=128@$A=1@O=Redbergsplatsen, Göteborg@L=5460003@a=128@$202412161504$202412161507$$$1$$$$$$§T$A=1@O=Redbergsplatsen, Göteborg@L=5460003@a=128@$A=1@O=Chalmers, Göteborg@L=1960002@a=128@$202412161511$202412161525$Spå    8$$1$$$$$$¶KC¶#VE#2#CF#100#CA#0#CM#0#SICT#0#AM#97#AM2#0#RT#15#¶KRCC¶#VE#1#",
             "detailsReference": "eyJUIjpbeyJSIjoiMXwxNzE5fDF8ODB8MTYxMjIwMjQiLCJPIjo1LCJEIjoxMCwiSSI6MH0seyJSIjoiMXwzNjgwMnwwfDgwfDE2MTIyMDI0IiwiTyI6NiwiRCI6MTMsIkkiOjJ9XSwiQyI6W3siUiI6Ikh8MXxXJEE9MUBPPVJlZGJlcmdzcGxhdHNlbiwgR8O2dGVib3JnQEw9NTQ2MDAwNUBhPTEyOEAkQT0xQE89UmVkYmVyZ3NwbGF0c2VuLCBHw7Z0ZWJvcmdATD01NDYwMDAzQGE9MTI4QCQyMDI0MTIxNjE1MDQkMjAyNDEyMTYxNTA3JCQkMSQkJCQkJHwjVkUjMiNDRiMxMDAjQ0EjMCNDTSMwI1NJQ1QjMCNBTSM5NyNBTTIjMCNSVCMxNSMiLCJJIjoxfV19",
             "tripLegs": [
@@ -3025,8 +3276,8 @@
                             }
                         },
                         "plannedTime": "2024-12-16T15:04:00.0000000+01:00",
-                        "estimatedTime": "2024-12-16T15:04:00.0000000+01:00",
-                        "estimatedOtherwisePlannedTime": "2024-12-16T15:04:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T15:03:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T15:03:00.0000000+01:00",
                         "notes": []
                     },
                     "isCancelled": false,
@@ -3056,9 +3307,9 @@
                     "plannedArrivalTime": "2024-12-16T15:04:00.0000000+01:00",
                     "plannedDurationInMinutes": 9,
                     "estimatedDepartureTime": "2024-12-16T14:56:00.0000000+01:00",
-                    "estimatedArrivalTime": "2024-12-16T15:04:00.0000000+01:00",
-                    "estimatedDurationInMinutes": 8,
-                    "estimatedOtherwisePlannedArrivalTime": "2024-12-16T15:04:00.0000000+01:00",
+                    "estimatedArrivalTime": "2024-12-16T15:03:00.0000000+01:00",
+                    "estimatedDurationInMinutes": 7,
+                    "estimatedOtherwisePlannedArrivalTime": "2024-12-16T15:03:00.0000000+01:00",
                     "estimatedOtherwisePlannedDepartureTime": "2024-12-16T14:56:00.0000000+01:00",
                     "journeyLegIndex": 0
                 },
@@ -3133,7 +3384,7 @@
                     },
                     "notes": [],
                     "plannedConnectingTimeInMinutes": 7,
-                    "estimatedConnectingTimeInMinutes": 7,
+                    "estimatedConnectingTimeInMinutes": 8,
                     "isRiskOfMissingConnection": false,
                     "plannedDepartureTime": "2024-12-16T15:11:00.0000000+01:00",
                     "plannedArrivalTime": "2024-12-16T15:25:00.0000000+01:00",
@@ -3170,8 +3421,8 @@
                             }
                         },
                         "plannedTime": "2024-12-16T15:04:00.0000000+01:00",
-                        "estimatedTime": "2024-12-16T15:04:00.0000000+01:00",
-                        "estimatedOtherwisePlannedTime": "2024-12-16T15:04:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T15:03:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T15:03:00.0000000+01:00",
                         "notes": []
                     },
                     "destination": {
@@ -3193,8 +3444,8 @@
                             }
                         },
                         "plannedTime": "2024-12-16T15:07:00.0000000+01:00",
-                        "estimatedTime": "2024-12-16T15:07:00.0000000+01:00",
-                        "estimatedOtherwisePlannedTime": "2024-12-16T15:07:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T15:06:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T15:06:00.0000000+01:00",
                         "notes": []
                     },
                     "notes": [],
@@ -3202,259 +3453,8 @@
                     "plannedDepartureTime": "2024-12-16T15:04:00.0000000+01:00",
                     "plannedArrivalTime": "2024-12-16T15:07:00.0000000+01:00",
                     "plannedDurationInMinutes": 3,
-                    "estimatedDepartureTime": "2024-12-16T15:04:00.0000000+01:00",
-                    "estimatedArrivalTime": "2024-12-16T15:07:00.0000000+01:00",
-                    "estimatedDurationInMinutes": 3,
-                    "estimatedNumberOfSteps": 20,
-                    "linkCoordinates": [
-                        {
-                            "latitude": 57.716311,
-                            "longitude": 12.004366
-                        },
-                        {
-                            "latitude": 57.716293,
-                            "longitude": 12.004375
-                        },
-                        {
-                            "latitude": 57.716284,
-                            "longitude": 12.004501
-                        },
-                        {
-                            "latitude": 57.716257,
-                            "longitude": 12.004501
-                        }
-                    ]
-                }
-            ],
-            "isDeparted": false
-        },
-        {
-            "reconstructionReference": "¶HKI¶T$A=1@O=Studiegången, Göteborg@L=7160001@a=128@$A=1@O=Redbergsplatsen, Göteborg@L=5460005@a=128@$202412161505$202412161515$Bus   17$$1$$$$$$§W$A=1@O=Redbergsplatsen, Göteborg@L=5460005@a=128@$A=1@O=Redbergsplatsen, Göteborg@L=5460003@a=128@$202412161515$202412161518$$$1$$$$$$§T$A=1@O=Redbergsplatsen, Göteborg@L=5460003@a=128@$A=1@O=Chalmers, Göteborg@L=1960002@a=128@$202412161516$202412161530$Spå    6$$1$$$$$$¶KC¶#VE#2#CF#100#CA#0#CM#0#SICT#0#AM#97#AM2#0#RT#15#¶KRCC¶#VE#1#VOLL#IST#",
-            "detailsReference": "eyJUIjpbeyJSIjoiMXwxNzM5fDB8ODB8MTYxMjIwMjQiLCJPIjo1LCJEIjoxMCwiSSI6MH0seyJSIjoiMXwxNTUyN3wwfDgwfDE2MTIyMDI0IiwiTyI6MTIsIkQiOjE5LCJJIjoyfV0sIkMiOlt7IlIiOiJIfDF8VyRBPTFATz1SZWRiZXJnc3BsYXRzZW4sIEfDtnRlYm9yZ0BMPTU0NjAwMDVAYT0xMjhAJEE9MUBPPVJlZGJlcmdzcGxhdHNlbiwgR8O2dGVib3JnQEw9NTQ2MDAwM0BhPTEyOEAkMjAyNDEyMTYxNTE1JDIwMjQxMjE2MTUxOCQkJDEkJCQkJCR8I1ZFIzIjQ0YjMTAwI0NBIzAjQ00jMCNTSUNUIzAjQU0jOTcjQU0yIzAjUlQjMTUjIiwiSSI6MX1dfQ",
-            "tripLegs": [
-                {
-                    "origin": {
-                        "stopPoint": {
-                            "gid": "9022014007160001",
-                            "name": "Studiegången, Göteborg",
-                            "platform": "A",
-                            "stopArea": {
-                                "gid": "9021014007160000",
-                                "name": "Studiegången",
-                                "latitude": 57.71440959,
-                                "longitude": 12.0395869,
-                                "tariffZone1": {
-                                    "gid": "9081014200003000",
-                                    "name": "Zon A",
-                                    "number": 3000,
-                                    "shortName": "A"
-                                }
-                            }
-                        },
-                        "plannedTime": "2024-12-16T15:05:00.0000000+01:00",
-                        "estimatedTime": "2024-12-16T15:07:00.0000000+01:00",
-                        "estimatedOtherwisePlannedTime": "2024-12-16T15:07:00.0000000+01:00",
-                        "notes": []
-                    },
-                    "destination": {
-                        "stopPoint": {
-                            "gid": "9022014005460005",
-                            "name": "Redbergsplatsen, Göteborg",
-                            "platform": "E",
-                            "stopArea": {
-                                "gid": "9021014005460000",
-                                "name": "Redbergsplatsen",
-                                "latitude": 57.71642259,
-                                "longitude": 12.00482456,
-                                "tariffZone1": {
-                                    "gid": "9081014200003000",
-                                    "name": "Zon A",
-                                    "number": 3000,
-                                    "shortName": "A"
-                                }
-                            }
-                        },
-                        "plannedTime": "2024-12-16T15:15:00.0000000+01:00",
-                        "estimatedTime": "2024-12-16T15:14:00.0000000+01:00",
-                        "estimatedOtherwisePlannedTime": "2024-12-16T15:14:00.0000000+01:00",
-                        "notes": []
-                    },
-                    "isCancelled": false,
-                    "isPartCancelled": false,
-                    "serviceJourney": {
-                        "gid": "9015014501700144",
-                        "direction": "Tuve",
-                        "directionDetails": {
-                            "fullDirection": "Tuve",
-                            "shortDirection": "Tuve"
-                        },
-                        "number": "144",
-                        "line": {
-                            "shortName": "17",
-                            "designation": "17",
-                            "isWheelchairAccessible": true,
-                            "name": "Buss 17",
-                            "backgroundColor": "#00008e",
-                            "foregroundColor": "#ffff50",
-                            "borderColor": "#00008e",
-                            "transportMode": "bus",
-                            "transportSubMode": "none"
-                        }
-                    },
-                    "notes": [],
-                    "plannedDepartureTime": "2024-12-16T15:05:00.0000000+01:00",
-                    "plannedArrivalTime": "2024-12-16T15:15:00.0000000+01:00",
-                    "plannedDurationInMinutes": 10,
-                    "estimatedDepartureTime": "2024-12-16T15:07:00.0000000+01:00",
-                    "estimatedArrivalTime": "2024-12-16T15:14:00.0000000+01:00",
-                    "estimatedDurationInMinutes": 7,
-                    "estimatedOtherwisePlannedArrivalTime": "2024-12-16T15:14:00.0000000+01:00",
-                    "estimatedOtherwisePlannedDepartureTime": "2024-12-16T15:07:00.0000000+01:00",
-                    "journeyLegIndex": 0
-                },
-                {
-                    "origin": {
-                        "stopPoint": {
-                            "gid": "9022014005460003",
-                            "name": "Redbergsplatsen, Göteborg",
-                            "platform": "C",
-                            "stopArea": {
-                                "gid": "9021014005460000",
-                                "name": "Redbergsplatsen",
-                                "latitude": 57.71642259,
-                                "longitude": 12.00482456,
-                                "tariffZone1": {
-                                    "gid": "9081014200003000",
-                                    "name": "Zon A",
-                                    "number": 3000,
-                                    "shortName": "A"
-                                }
-                            }
-                        },
-                        "plannedTime": "2024-12-16T15:16:00.0000000+01:00",
-                        "estimatedTime": "2024-12-16T15:17:00.0000000+01:00",
-                        "estimatedOtherwisePlannedTime": "2024-12-16T15:17:00.0000000+01:00",
-                        "notes": []
-                    },
-                    "destination": {
-                        "stopPoint": {
-                            "gid": "9022014001960002",
-                            "name": "Chalmers, Göteborg",
-                            "platform": "B",
-                            "stopArea": {
-                                "gid": "9021014001960000",
-                                "name": "Chalmers",
-                                "latitude": 57.69000378,
-                                "longitude": 11.97295362,
-                                "tariffZone1": {
-                                    "gid": "9081014200003000",
-                                    "name": "Zon A",
-                                    "number": 3000,
-                                    "shortName": "A"
-                                }
-                            }
-                        },
-                        "plannedTime": "2024-12-16T15:30:00.0000000+01:00",
-                        "estimatedTime": "2024-12-16T15:30:00.0000000+01:00",
-                        "estimatedOtherwisePlannedTime": "2024-12-16T15:30:00.0000000+01:00",
-                        "notes": []
-                    },
-                    "isCancelled": false,
-                    "isPartCancelled": false,
-                    "serviceJourney": {
-                        "gid": "9015014500605530",
-                        "direction": "Länsmansgården via Sahlgrenska",
-                        "directionDetails": {
-                            "fullDirection": "Länsmansgården via Sahlgrenska",
-                            "shortDirection": "Länsmansgården",
-                            "via": "Sahlgrenska"
-                        },
-                        "number": "5530",
-                        "line": {
-                            "shortName": "6",
-                            "designation": "6",
-                            "isWheelchairAccessible": true,
-                            "name": "Spårvagn 6",
-                            "backgroundColor": "#f89828",
-                            "foregroundColor": "#00435c",
-                            "borderColor": "#f89828",
-                            "transportMode": "tram",
-                            "transportSubMode": "none"
-                        }
-                    },
-                    "notes": [],
-                    "plannedConnectingTimeInMinutes": 1,
-                    "estimatedConnectingTimeInMinutes": 3,
-                    "isRiskOfMissingConnection": false,
-                    "plannedDepartureTime": "2024-12-16T15:16:00.0000000+01:00",
-                    "plannedArrivalTime": "2024-12-16T15:30:00.0000000+01:00",
-                    "plannedDurationInMinutes": 14,
-                    "estimatedDepartureTime": "2024-12-16T15:17:00.0000000+01:00",
-                    "estimatedArrivalTime": "2024-12-16T15:30:00.0000000+01:00",
-                    "estimatedDurationInMinutes": 13,
-                    "estimatedOtherwisePlannedArrivalTime": "2024-12-16T15:30:00.0000000+01:00",
-                    "estimatedOtherwisePlannedDepartureTime": "2024-12-16T15:17:00.0000000+01:00",
-                    "journeyLegIndex": 2
-                }
-            ],
-            "connectionLinks": [
-                {
-                    "journeyLegIndex": 1,
-                    "transportMode": "walk",
-                    "transportSubMode": "none",
-                    "origin": {
-                        "stopPoint": {
-                            "gid": "9022014005460005",
-                            "name": "Redbergsplatsen, Göteborg",
-                            "platform": "E",
-                            "stopArea": {
-                                "gid": "9021014005460000",
-                                "name": "Redbergsplatsen",
-                                "latitude": 57.71642259,
-                                "longitude": 12.00482456,
-                                "tariffZone1": {
-                                    "gid": "9081014200003000",
-                                    "name": "Zon A",
-                                    "number": 3000,
-                                    "shortName": "A"
-                                }
-                            }
-                        },
-                        "plannedTime": "2024-12-16T15:15:00.0000000+01:00",
-                        "estimatedTime": "2024-12-16T15:14:00.0000000+01:00",
-                        "estimatedOtherwisePlannedTime": "2024-12-16T15:14:00.0000000+01:00",
-                        "notes": []
-                    },
-                    "destination": {
-                        "stopPoint": {
-                            "gid": "9022014005460003",
-                            "name": "Redbergsplatsen, Göteborg",
-                            "platform": "C",
-                            "stopArea": {
-                                "gid": "9021014005460000",
-                                "name": "Redbergsplatsen",
-                                "latitude": 57.71642259,
-                                "longitude": 12.00482456,
-                                "tariffZone1": {
-                                    "gid": "9081014200003000",
-                                    "name": "Zon A",
-                                    "number": 3000,
-                                    "shortName": "A"
-                                }
-                            }
-                        },
-                        "plannedTime": "2024-12-16T15:18:00.0000000+01:00",
-                        "estimatedTime": "2024-12-16T15:17:00.0000000+01:00",
-                        "estimatedOtherwisePlannedTime": "2024-12-16T15:17:00.0000000+01:00",
-                        "notes": []
-                    },
-                    "notes": [],
-                    "distanceInMeters": 13,
-                    "plannedDepartureTime": "2024-12-16T15:15:00.0000000+01:00",
-                    "plannedArrivalTime": "2024-12-16T15:18:00.0000000+01:00",
-                    "plannedDurationInMinutes": 3,
-                    "estimatedDepartureTime": "2024-12-16T15:14:00.0000000+01:00",
-                    "estimatedArrivalTime": "2024-12-16T15:17:00.0000000+01:00",
+                    "estimatedDepartureTime": "2024-12-16T15:03:00.0000000+01:00",
+                    "estimatedArrivalTime": "2024-12-16T15:06:00.0000000+01:00",
                     "estimatedDurationInMinutes": 3,
                     "estimatedNumberOfSteps": 20,
                     "linkCoordinates": [
@@ -3526,8 +3526,8 @@
                             }
                         },
                         "plannedTime": "2024-12-16T15:15:00.0000000+01:00",
-                        "estimatedTime": "2024-12-16T15:14:00.0000000+01:00",
-                        "estimatedOtherwisePlannedTime": "2024-12-16T15:14:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T15:15:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T15:15:00.0000000+01:00",
                         "notes": []
                     },
                     "isCancelled": false,
@@ -3557,9 +3557,9 @@
                     "plannedArrivalTime": "2024-12-16T15:15:00.0000000+01:00",
                     "plannedDurationInMinutes": 10,
                     "estimatedDepartureTime": "2024-12-16T15:07:00.0000000+01:00",
-                    "estimatedArrivalTime": "2024-12-16T15:14:00.0000000+01:00",
-                    "estimatedDurationInMinutes": 7,
-                    "estimatedOtherwisePlannedArrivalTime": "2024-12-16T15:14:00.0000000+01:00",
+                    "estimatedArrivalTime": "2024-12-16T15:15:00.0000000+01:00",
+                    "estimatedDurationInMinutes": 8,
+                    "estimatedOtherwisePlannedArrivalTime": "2024-12-16T15:15:00.0000000+01:00",
                     "estimatedOtherwisePlannedDepartureTime": "2024-12-16T15:07:00.0000000+01:00",
                     "journeyLegIndex": 0
                 },
@@ -3634,7 +3634,7 @@
                     },
                     "notes": [],
                     "plannedConnectingTimeInMinutes": 5,
-                    "estimatedConnectingTimeInMinutes": 6,
+                    "estimatedConnectingTimeInMinutes": 5,
                     "isRiskOfMissingConnection": false,
                     "plannedDepartureTime": "2024-12-16T15:20:00.0000000+01:00",
                     "plannedArrivalTime": "2024-12-16T15:34:00.0000000+01:00",
@@ -3671,8 +3671,8 @@
                             }
                         },
                         "plannedTime": "2024-12-16T15:15:00.0000000+01:00",
-                        "estimatedTime": "2024-12-16T15:14:00.0000000+01:00",
-                        "estimatedOtherwisePlannedTime": "2024-12-16T15:14:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T15:15:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T15:15:00.0000000+01:00",
                         "notes": []
                     },
                     "destination": {
@@ -3694,8 +3694,8 @@
                             }
                         },
                         "plannedTime": "2024-12-16T15:18:00.0000000+01:00",
-                        "estimatedTime": "2024-12-16T15:17:00.0000000+01:00",
-                        "estimatedOtherwisePlannedTime": "2024-12-16T15:17:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T15:18:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T15:18:00.0000000+01:00",
                         "notes": []
                     },
                     "notes": [],
@@ -3703,8 +3703,8 @@
                     "plannedDepartureTime": "2024-12-16T15:15:00.0000000+01:00",
                     "plannedArrivalTime": "2024-12-16T15:18:00.0000000+01:00",
                     "plannedDurationInMinutes": 3,
-                    "estimatedDepartureTime": "2024-12-16T15:14:00.0000000+01:00",
-                    "estimatedArrivalTime": "2024-12-16T15:17:00.0000000+01:00",
+                    "estimatedDepartureTime": "2024-12-16T15:15:00.0000000+01:00",
+                    "estimatedArrivalTime": "2024-12-16T15:18:00.0000000+01:00",
                     "estimatedDurationInMinutes": 3,
                     "estimatedNumberOfSteps": 20,
                     "linkCoordinates": [
@@ -3856,8 +3856,8 @@
                             }
                         },
                         "plannedTime": "2024-12-16T15:40:00.0000000+01:00",
-                        "estimatedTime": "2024-12-16T15:40:00.0000000+01:00",
-                        "estimatedOtherwisePlannedTime": "2024-12-16T15:40:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T15:41:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T15:41:00.0000000+01:00",
                         "notes": []
                     },
                     "isCancelled": false,
@@ -3891,9 +3891,9 @@
                     "plannedArrivalTime": "2024-12-16T15:40:00.0000000+01:00",
                     "plannedDurationInMinutes": 14,
                     "estimatedDepartureTime": "2024-12-16T15:27:00.0000000+01:00",
-                    "estimatedArrivalTime": "2024-12-16T15:40:00.0000000+01:00",
-                    "estimatedDurationInMinutes": 13,
-                    "estimatedOtherwisePlannedArrivalTime": "2024-12-16T15:40:00.0000000+01:00",
+                    "estimatedArrivalTime": "2024-12-16T15:41:00.0000000+01:00",
+                    "estimatedDurationInMinutes": 14,
+                    "estimatedOtherwisePlannedArrivalTime": "2024-12-16T15:41:00.0000000+01:00",
                     "estimatedOtherwisePlannedDepartureTime": "2024-12-16T15:27:00.0000000+01:00",
                     "journeyLegIndex": 2
                 }
@@ -4731,11 +4731,261 @@
                 }
             ],
             "isDeparted": false
+        },
+        {
+            "reconstructionReference": "¶HKI¶T$A=1@O=Studiegången, Göteborg@L=7160001@a=128@$A=1@O=Redbergsplatsen, Göteborg@L=5460005@a=128@$202412161535$202412161545$Bus   17$$1$$$$$$§W$A=1@O=Redbergsplatsen, Göteborg@L=5460005@a=128@$A=1@O=Redbergsplatsen, Göteborg@L=5460003@a=128@$202412161545$202412161548$$$1$$$$$$§T$A=1@O=Redbergsplatsen, Göteborg@L=5460003@a=128@$A=1@O=Chalmers, Göteborg@L=1960002@a=128@$202412161548$202412161602$Spå    8$$1$$$$$$¶KC¶#VE#2#CF#100#CA#0#CM#0#SICT#0#AM#97#AM2#0#RT#15#¶KRCC¶#VE#1#",
+            "detailsReference": "eyJUIjpbeyJSIjoiMXwxNzM5fDN8ODB8MTYxMjIwMjQiLCJPIjo1LCJEIjoxMCwiSSI6MH0seyJSIjoiMXwxNTIxOXwxfDgwfDE2MTIyMDI0IiwiTyI6NiwiRCI6MTMsIkkiOjJ9XSwiQyI6W3siUiI6Ikh8MXxXJEE9MUBPPVJlZGJlcmdzcGxhdHNlbiwgR8O2dGVib3JnQEw9NTQ2MDAwNUBhPTEyOEAkQT0xQE89UmVkYmVyZ3NwbGF0c2VuLCBHw7Z0ZWJvcmdATD01NDYwMDAzQGE9MTI4QCQyMDI0MTIxNjE1NDUkMjAyNDEyMTYxNTQ4JCQkMSQkJCQkJHwjVkUjMiNDRiMxMDAjQ0EjMCNDTSMwI1NJQ1QjMCNBTSM5NyNBTTIjMCNSVCMxNSMiLCJJIjoxfV19",
+            "tripLegs": [
+                {
+                    "origin": {
+                        "stopPoint": {
+                            "gid": "9022014007160001",
+                            "name": "Studiegången, Göteborg",
+                            "platform": "A",
+                            "stopArea": {
+                                "gid": "9021014007160000",
+                                "name": "Studiegången",
+                                "latitude": 57.71440959,
+                                "longitude": 12.0395869,
+                                "tariffZone1": {
+                                    "gid": "9081014200003000",
+                                    "name": "Zon A",
+                                    "number": 3000,
+                                    "shortName": "A"
+                                }
+                            }
+                        },
+                        "plannedTime": "2024-12-16T15:35:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T15:36:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T15:36:00.0000000+01:00",
+                        "notes": []
+                    },
+                    "destination": {
+                        "stopPoint": {
+                            "gid": "9022014005460005",
+                            "name": "Redbergsplatsen, Göteborg",
+                            "platform": "E",
+                            "stopArea": {
+                                "gid": "9021014005460000",
+                                "name": "Redbergsplatsen",
+                                "latitude": 57.71642259,
+                                "longitude": 12.00482456,
+                                "tariffZone1": {
+                                    "gid": "9081014200003000",
+                                    "name": "Zon A",
+                                    "number": 3000,
+                                    "shortName": "A"
+                                }
+                            }
+                        },
+                        "plannedTime": "2024-12-16T15:45:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T15:44:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T15:44:00.0000000+01:00",
+                        "notes": []
+                    },
+                    "isCancelled": false,
+                    "isPartCancelled": false,
+                    "serviceJourney": {
+                        "gid": "9015014501700156",
+                        "direction": "Tuve",
+                        "directionDetails": {
+                            "fullDirection": "Tuve",
+                            "shortDirection": "Tuve"
+                        },
+                        "number": "156",
+                        "line": {
+                            "shortName": "17",
+                            "designation": "17",
+                            "isWheelchairAccessible": true,
+                            "name": "Buss 17",
+                            "backgroundColor": "#00008e",
+                            "foregroundColor": "#ffff50",
+                            "borderColor": "#00008e",
+                            "transportMode": "bus",
+                            "transportSubMode": "none"
+                        }
+                    },
+                    "notes": [],
+                    "plannedDepartureTime": "2024-12-16T15:35:00.0000000+01:00",
+                    "plannedArrivalTime": "2024-12-16T15:45:00.0000000+01:00",
+                    "plannedDurationInMinutes": 10,
+                    "estimatedDepartureTime": "2024-12-16T15:36:00.0000000+01:00",
+                    "estimatedArrivalTime": "2024-12-16T15:44:00.0000000+01:00",
+                    "estimatedDurationInMinutes": 8,
+                    "estimatedOtherwisePlannedArrivalTime": "2024-12-16T15:44:00.0000000+01:00",
+                    "estimatedOtherwisePlannedDepartureTime": "2024-12-16T15:36:00.0000000+01:00",
+                    "journeyLegIndex": 0
+                },
+                {
+                    "origin": {
+                        "stopPoint": {
+                            "gid": "9022014005460003",
+                            "name": "Redbergsplatsen, Göteborg",
+                            "platform": "C",
+                            "stopArea": {
+                                "gid": "9021014005460000",
+                                "name": "Redbergsplatsen",
+                                "latitude": 57.71642259,
+                                "longitude": 12.00482456,
+                                "tariffZone1": {
+                                    "gid": "9081014200003000",
+                                    "name": "Zon A",
+                                    "number": 3000,
+                                    "shortName": "A"
+                                }
+                            }
+                        },
+                        "plannedTime": "2024-12-16T15:48:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T15:49:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T15:49:00.0000000+01:00",
+                        "notes": []
+                    },
+                    "destination": {
+                        "stopPoint": {
+                            "gid": "9022014001960002",
+                            "name": "Chalmers, Göteborg",
+                            "platform": "B",
+                            "stopArea": {
+                                "gid": "9021014001960000",
+                                "name": "Chalmers",
+                                "latitude": 57.69000378,
+                                "longitude": 11.97295362,
+                                "tariffZone1": {
+                                    "gid": "9081014200003000",
+                                    "name": "Zon A",
+                                    "number": 3000,
+                                    "shortName": "A"
+                                }
+                            }
+                        },
+                        "plannedTime": "2024-12-16T16:02:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T16:02:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T16:02:00.0000000+01:00",
+                        "notes": []
+                    },
+                    "isCancelled": false,
+                    "isPartCancelled": false,
+                    "serviceJourney": {
+                        "gid": "9015014500805616",
+                        "direction": "Frölunda",
+                        "directionDetails": {
+                            "fullDirection": "Frölunda",
+                            "shortDirection": "Frölunda"
+                        },
+                        "number": "5616",
+                        "line": {
+                            "shortName": "8",
+                            "designation": "8",
+                            "isWheelchairAccessible": true,
+                            "name": "Spårvagn 8",
+                            "backgroundColor": "#a5449a",
+                            "foregroundColor": "#ffffff",
+                            "borderColor": "#ffffff",
+                            "transportMode": "tram",
+                            "transportSubMode": "none"
+                        }
+                    },
+                    "notes": [],
+                    "plannedConnectingTimeInMinutes": 3,
+                    "estimatedConnectingTimeInMinutes": 5,
+                    "isRiskOfMissingConnection": false,
+                    "plannedDepartureTime": "2024-12-16T15:48:00.0000000+01:00",
+                    "plannedArrivalTime": "2024-12-16T16:02:00.0000000+01:00",
+                    "plannedDurationInMinutes": 14,
+                    "estimatedDepartureTime": "2024-12-16T15:49:00.0000000+01:00",
+                    "estimatedArrivalTime": "2024-12-16T16:02:00.0000000+01:00",
+                    "estimatedDurationInMinutes": 13,
+                    "estimatedOtherwisePlannedArrivalTime": "2024-12-16T16:02:00.0000000+01:00",
+                    "estimatedOtherwisePlannedDepartureTime": "2024-12-16T15:49:00.0000000+01:00",
+                    "journeyLegIndex": 2
+                }
+            ],
+            "connectionLinks": [
+                {
+                    "journeyLegIndex": 1,
+                    "transportMode": "walk",
+                    "transportSubMode": "none",
+                    "origin": {
+                        "stopPoint": {
+                            "gid": "9022014005460005",
+                            "name": "Redbergsplatsen, Göteborg",
+                            "platform": "E",
+                            "stopArea": {
+                                "gid": "9021014005460000",
+                                "name": "Redbergsplatsen",
+                                "latitude": 57.71642259,
+                                "longitude": 12.00482456,
+                                "tariffZone1": {
+                                    "gid": "9081014200003000",
+                                    "name": "Zon A",
+                                    "number": 3000,
+                                    "shortName": "A"
+                                }
+                            }
+                        },
+                        "plannedTime": "2024-12-16T15:45:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T15:44:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T15:44:00.0000000+01:00",
+                        "notes": []
+                    },
+                    "destination": {
+                        "stopPoint": {
+                            "gid": "9022014005460003",
+                            "name": "Redbergsplatsen, Göteborg",
+                            "platform": "C",
+                            "stopArea": {
+                                "gid": "9021014005460000",
+                                "name": "Redbergsplatsen",
+                                "latitude": 57.71642259,
+                                "longitude": 12.00482456,
+                                "tariffZone1": {
+                                    "gid": "9081014200003000",
+                                    "name": "Zon A",
+                                    "number": 3000,
+                                    "shortName": "A"
+                                }
+                            }
+                        },
+                        "plannedTime": "2024-12-16T15:48:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T15:47:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T15:47:00.0000000+01:00",
+                        "notes": []
+                    },
+                    "notes": [],
+                    "distanceInMeters": 13,
+                    "plannedDepartureTime": "2024-12-16T15:45:00.0000000+01:00",
+                    "plannedArrivalTime": "2024-12-16T15:48:00.0000000+01:00",
+                    "plannedDurationInMinutes": 3,
+                    "estimatedDepartureTime": "2024-12-16T15:44:00.0000000+01:00",
+                    "estimatedArrivalTime": "2024-12-16T15:47:00.0000000+01:00",
+                    "estimatedDurationInMinutes": 3,
+                    "estimatedNumberOfSteps": 20,
+                    "linkCoordinates": [
+                        {
+                            "latitude": 57.716311,
+                            "longitude": 12.004366
+                        },
+                        {
+                            "latitude": 57.716293,
+                            "longitude": 12.004375
+                        },
+                        {
+                            "latitude": 57.716284,
+                            "longitude": 12.004501
+                        },
+                        {
+                            "latitude": 57.716257,
+                            "longitude": 12.004501
+                        }
+                    ]
+                }
+            ],
+            "isDeparted": false
         }
     ],
     "links": {
-        "previous": "journeys?originLatitude=57.714406&originLongitude=12.039585&destinationLatitude=57.69&destinationLongitude=11.972957&transportModes=walk&transportModes=bike&transportModes=bus&transportModes=tram&transportModes=train&totalBike=1,0,20000&dateTime=2024-12-16T13%3A35%3A10.0000000%2B00%3A00&paginationReference=M3xPQnxNVMK1MTTCtTkwMTU1wrU5MDE1NcK1OTAxODbCtTkwMTg2wrUwwrUwwrU4NcK1OTAxNTXCtTHCtTDCtTLCtTDCtTDCtS0yMTQ3NDgzNjQ4wrUxwrUyfFBESMK1OWZkZGYwODcyYzc4YzA4NTMxZGIxNWQzMzkwYzdkNDl8UkTCtTE2MTIyMDI0fFJUwrUxNDM1MTB8VVPCtTB8UlPCtUlOSVQ",
-        "next": "journeys?originLatitude=57.714406&originLongitude=12.039585&destinationLatitude=57.69&destinationLongitude=11.972957&transportModes=walk&transportModes=bike&transportModes=bus&transportModes=tram&transportModes=train&totalBike=1,0,20000&dateTime=2024-12-16T13%3A35%3A10.0000000%2B00%3A00&paginationReference=M3xPRnxNVMK1MTTCtTkwMjA1wrU5MDIwNcK1OTAyMznCtTkwMjM5wrUwwrUwwrU4NcK1OTAxOTbCtTbCtTDCtTLCtTDCtTDCtS0yMTQ3NDgzNjQ4wrUxwrUyfFBESMK1OWZkZGYwODcyYzc4YzA4NTMxZGIxNWQzMzkwYzdkNDl8UkTCtTE2MTIyMDI0fFJUwrUxNDM1MTB8VVPCtTB8UlPCtUlOSVQ",
-        "current": "journeys?originLatitude=57.714406&originLongitude=12.039585&destinationLatitude=57.69&destinationLongitude=11.972957&transportModes=walk&transportModes=bike&transportModes=bus&transportModes=tram&transportModes=train&totalBike=1,0,20000&dateTime=2024-12-16T13%3A35%3A10.0000000%2B00%3A00"
+        "previous": "journeys?originLatitude=57.714406&originLongitude=12.039585&destinationLatitude=57.69&destinationLongitude=11.972957&transportModes=walk&transportModes=bike&transportModes=bus&transportModes=tram&transportModes=train&totalBike=1,0,20000&dateTime=2024-12-16T13%3A36%3A24.0000000%2B00%3A00&paginationReference=M3xPQnxNVMK1MTTCtTkwMTY1wrU5MDE2NcK1OTAxOTbCtTkwMTk2wrUwwrUwwrU4NcK1OTAxNTbCtTHCtTDCtTLCtTDCtTDCtS0yMTQ3NDgzNjQ4wrUxwrUyfFBESMK1OWZkZGYwODcyYzc4YzA4NTMxZGIxNWQzMzkwYzdkNDl8UkTCtTE2MTIyMDI0fFJUwrUxNDM2MjR8VVPCtTB8UlPCtUlOSVQ",
+        "next": "journeys?originLatitude=57.714406&originLongitude=12.039585&destinationLatitude=57.69&destinationLongitude=11.972957&transportModes=walk&transportModes=bike&transportModes=bus&transportModes=tram&transportModes=train&totalBike=1,0,20000&dateTime=2024-12-16T13%3A36%3A24.0000000%2B00%3A00&paginationReference=M3xPRnxNVMK1MTTCtTkwMjE1wrU5MDIxNcK1OTAyNDLCtTkwMjQywrUwwrUwwrU4NcK1OTAyMDbCtTbCtTDCtTLCtTDCtTDCtS0yMTQ3NDgzNjQ4wrUxwrUyfFBESMK1OWZkZGYwODcyYzc4YzA4NTMxZGIxNWQzMzkwYzdkNDl8UkTCtTE2MTIyMDI0fFJUwrUxNDM2MjR8VVPCtTB8UlPCtUlOSVQ",
+        "current": "journeys?originLatitude=57.714406&originLongitude=12.039585&destinationLatitude=57.69&destinationLongitude=11.972957&transportModes=walk&transportModes=bike&transportModes=bus&transportModes=tram&transportModes=train&totalBike=1,0,20000&dateTime=2024-12-16T13%3A36%3A24.0000000%2B00%3A00"
     }
 }
