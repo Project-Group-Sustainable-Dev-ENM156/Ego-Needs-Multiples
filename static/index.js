@@ -139,24 +139,21 @@ function rate(data) {
     const emissions_weight = ecological / tot;
     const price_weight = economical / tot;
     const time_weight = social / tot;
-    let max_emissions = 0;
-    let max_price = 0;
-    let max_time = 0;
+    let emissions = [];
+    let prices = [];
+    let times = [];
     Object.keys(data).forEach(key => {
-        if (data[key].emissions > max_emissions) {
-            max_emissions = data[key].emissions;
-        }
-        if (data[key].price > max_price) {
-            max_price = data[key].price;
-        }
-        if (data[key].time > max_time) {
-            max_time = data[key].time;
-        }
+        emissions.add(data[key].emissions);
+        prices.add(data[key].prices);
+        times.add(data[key].times);
       });
+    const median_emissions = calculateMedian(emissions);
+    const median_price = calculateMedian(prices);
+    const median_time = calculateMedian(times);
     let max_rating = 0;
     // Find preliminary rating
     Object.keys(data).forEach(key => {
-        data[key].rating = emissions_weight * max_emissions / Math.max(data[key].emissions, 1) + price_weight * max_price / Math.max(data[key].price, 1) + time_weight * max_time / data[key].time;
+        data[key].rating = emissions_weight * 10 * median_emissions / Math.max(data[key].emissions / 10, 1) + price_weight * median_price / Math.max(data[key].price, 1) + time_weight * median_time / data[key].time;
         if (data[key].rating > max_rating) {
             max_rating = data[key].rating;
         }
@@ -165,10 +162,19 @@ function rate(data) {
     Object.keys(data).forEach(key => {
         // data[key].rating = Math.random() * 100;
         data[key].rating = 100 * data[key].rating / max_rating;
-        // console.log(data[key].rating);
+        console.log(data[key].rating);
     });
       
 }
+
+function calculateMedian(arr) {
+    const sorted = arr.sort((a, b) => a - b);
+    const mid = Math.floor(sorted.length / 2);
+  
+    return sorted.length % 2 !== 0
+      ? sorted[mid]
+      : (sorted[mid - 1] + sorted[mid]) / 2;
+  }
 
 function capitalizeWords(sentence) {
     return sentence
