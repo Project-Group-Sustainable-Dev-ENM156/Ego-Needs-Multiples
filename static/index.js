@@ -15,6 +15,13 @@ const p = {
     public_transport: getPrice("public_transport", distance)
 };
 
+const units = {
+  emissions: " g‎ ",
+  price: " kr‎ ",
+  time: " min‎ ",
+  rating: "%‎ "
+};
+
 var startingPoint;
 var destination;
 var startingPoint;
@@ -108,8 +115,13 @@ async function createTable(json_data) {
 
         // Create cells for emissions, price, time, and rating
         ["emissions", "price", "time", "rating"].forEach(elem => {
+          
             const cell = document.createElement("td");
-            cell.textContent = value[elem]; // Use the value of the property
+            const unit = units[elem] || "";
+            cell.textContent = value[elem] + unit; // Use the value of the property
+            cell.style.textAlign = "right";
+            cell.style.paddingRight = "3px";
+            cell.style.paddingLeft = "3px";
             cell.setAttribute("id", key + "_" + elem); // Set an ID for the cell
             cell.setAttribute("class", elem); // Set a class for the cell
             row.appendChild(cell);
@@ -152,7 +164,7 @@ function rate(data) {
     // Normalize rating to 0-100
     Object.keys(data).forEach(key => {
         // data[key].rating = Math.random() * 100;
-        data[key].rating = Math.round(100 * data[key].rating / max_rating);
+        data[key].rating = 100 * data[key].rating / max_rating;
         // console.log(data[key].rating);
     });
       
@@ -189,7 +201,7 @@ function get_CO2_emissions(transportation_method, passengers, distance) {
     // Distance is in meters
 
     const emissionFactors = {
-        // Average gg co2 emissions per m
+        // Average kg co2 emissions per m
         // Source: https://www.vasttrafik.se/info/statistik/ using the calc for electric buss 30 people and 1 for cars
         on_foot: 0,
         bicycle: 0,
