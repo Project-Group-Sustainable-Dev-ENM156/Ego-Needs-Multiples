@@ -144,8 +144,8 @@ function rate(data) {
     let times = [];
     Object.keys(data).forEach(key => {
         emissions.push(data[key].emissions);
-        prices.push(data[key].prices);
-        times.push(data[key].times);
+        prices.push(data[key].price);
+        times.push(data[key].time);
       });
     const median_emissions = calculateMedian(emissions);
     const median_price = calculateMedian(prices);
