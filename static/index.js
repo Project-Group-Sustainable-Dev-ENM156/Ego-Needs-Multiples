@@ -16,7 +16,7 @@ const p = {
 };
 
 const units = {
-  emissions: " kg",
+  emissions: " g",
   price: " kr",
   time: " min",
   rating: "%"

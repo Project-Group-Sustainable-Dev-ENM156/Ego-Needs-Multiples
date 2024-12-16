@@ -1,8 +1,8 @@
 {
     "results": [
         {
-            "reconstructionReference": "¶HKI¶G@B$A=1@O=Studiegången, Göteborg@L=7160000@a=0@$A=1@O=Chalmers, Göteborg@L=1960000@a=0@$202412161433$202412161500$$$1$$$$$$¶GP¶ft@0@2000@120@1@100@1@0@0@@@@@false@0@-1@0@-1@-1@@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@0@0@@@@@false@0@-1@0@-1@-1@@$f@$f@$f@$f@$f@$§tt@0@2000@120@1@100@1@0@0@@@@@false@0@-1@0@-1@-1@@$t@0@20000@120@1@100@1@0@0@@@@@false@0@-1@0@-1@-1@@$f@$f@$f@$f@$§",
-            "detailsReference": "eyJUIjpbXSwiTCI6Ikd8MXxHQEJ8QT0xQE89U3R1ZGllZ8OlbmdlbiwgR8O2dGVib3JnQEw9NzE2MDAwMEBhPTBAfEE9MUBPPUNoYWxtZXJzLCBHw7Z0ZWJvcmdATD0xOTYwMDAwQGE9MEB8MTYxMjIwMjR8MTQzMzU4fDE1MDA1OHxmdHxmdEAwQDIwMDBAMTIwQDFAMTAwQDFAMEAwQEBAQEBmYWxzZUAwQC0xQDBALTFALTFAQCRmQCRmQCRmQCRmQCRmQCTCp2J0QDBAMjAwMEAxMjBAMUAxMDBAMUAwQDBAQEBAQGZhbHNlQDBALTFAMEAtMUAtMUBAJGZAJGZAJGZAJGZAJGZAJMKndHRAMEAyMDAwQDEyMEAxQDEwMEAxQDBAMEBAQEBAZmFsc2VAMEAtMUAwQC0xQC0xQEAkdEAwQDIwMDAwQDEyMEAxQDEwMEAxQDBAMEBAQEBAZmFsc2VAMEAtMUAwQC0xQC0xQEAkZkAkZkAkZkAkZkAkwqd8fHx8In0",
+            "reconstructionReference": "¶HKI¶G@B$A=1@O=Studiegången, Göteborg@L=7160000@a=0@$A=1@O=Chalmers, Göteborg@L=1960000@a=0@$202412161435$202412161502$$$1$$$$$$¶GP¶ft@0@2000@120@1@100@1@0@0@@@@@false@0@-1@0@-1@-1@@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@0@0@@@@@false@0@-1@0@-1@-1@@$f@$f@$f@$f@$f@$§tt@0@2000@120@1@100@1@0@0@@@@@false@0@-1@0@-1@-1@@$t@0@20000@120@1@100@1@0@0@@@@@false@0@-1@0@-1@-1@@$f@$f@$f@$f@$§",
+            "detailsReference": "eyJUIjpbXSwiTCI6Ikd8MXxHQEJ8QT0xQE89U3R1ZGllZ8OlbmdlbiwgR8O2dGVib3JnQEw9NzE2MDAwMEBhPTBAfEE9MUBPPUNoYWxtZXJzLCBHw7Z0ZWJvcmdATD0xOTYwMDAwQGE9MEB8MTYxMjIwMjR8MTQzNTEwfDE1MDIxMHxmdHxmdEAwQDIwMDBAMTIwQDFAMTAwQDFAMEAwQEBAQEBmYWxzZUAwQC0xQDBALTFALTFAQCRmQCRmQCRmQCRmQCRmQCTCp2J0QDBAMjAwMEAxMjBAMUAxMDBAMUAwQDBAQEBAQGZhbHNlQDBALTFAMEAtMUAtMUBAJGZAJGZAJGZAJGZAJGZAJMKndHRAMEAyMDAwQDEyMEAxQDEwMEAxQDBAMEBAQEBAZmFsc2VAMEAtMUAwQC0xQC0xQEAkdEAwQDIwMDAwQDEyMEAxQDEwMEAxQDBAMEBAQEBAZmFsc2VAMEAtMUAwQC0xQC0xQEAkZkAkZkAkZkAkZkAkwqd8fHx8In0",
             "destinationLink": {
                 "transportMode": "bike",
                 "transportSubMode": "none",
@@ -12,8 +12,8 @@
                     "locationType": "stoparea",
                     "latitude": 57.714406,
                     "longitude": 12.039585,
-                    "plannedTime": "2024-12-16T14:33:58.0000000+01:00",
-                    "estimatedOtherwisePlannedTime": "2024-12-16T14:33:58.0000000+01:00",
+                    "plannedTime": "2024-12-16T14:35:10.0000000+01:00",
+                    "estimatedOtherwisePlannedTime": "2024-12-16T14:35:10.0000000+01:00",
                     "notes": []
                 },
                 "destination": {
@@ -22,14 +22,14 @@
                     "locationType": "stoparea",
                     "latitude": 57.69,
                     "longitude": 11.972957,
-                    "plannedTime": "2024-12-16T15:00:58.0000000+01:00",
-                    "estimatedOtherwisePlannedTime": "2024-12-16T15:00:58.0000000+01:00",
+                    "plannedTime": "2024-12-16T15:02:10.0000000+01:00",
+                    "estimatedOtherwisePlannedTime": "2024-12-16T15:02:10.0000000+01:00",
                     "notes": []
                 },
                 "notes": [],
                 "distanceInMeters": 6579,
-                "plannedDepartureTime": "2024-12-16T14:33:58.0000000+01:00",
-                "plannedArrivalTime": "2024-12-16T15:00:58.0000000+01:00",
+                "plannedDepartureTime": "2024-12-16T14:35:10.0000000+01:00",
+                "plannedArrivalTime": "2024-12-16T15:02:10.0000000+01:00",
                 "plannedDurationInMinutes": 27,
                 "linkCoordinates": [
                     {
@@ -2604,8 +2604,8 @@
                             }
                         },
                         "plannedTime": "2024-12-16T15:10:00.0000000+01:00",
-                        "estimatedTime": "2024-12-16T15:10:00.0000000+01:00",
-                        "estimatedOtherwisePlannedTime": "2024-12-16T15:10:00.0000000+01:00",
+                        "estimatedTime": "2024-12-16T15:11:00.0000000+01:00",
+                        "estimatedOtherwisePlannedTime": "2024-12-16T15:11:00.0000000+01:00",
                         "notes": []
                     },
                     "isCancelled": false,
@@ -2639,9 +2639,9 @@
                     "plannedArrivalTime": "2024-12-16T15:10:00.0000000+01:00",
                     "plannedDurationInMinutes": 14,
                     "estimatedDepartureTime": "2024-12-16T14:57:00.0000000+01:00",
-                    "estimatedArrivalTime": "2024-12-16T15:10:00.0000000+01:00",
-                    "estimatedDurationInMinutes": 13,
-                    "estimatedOtherwisePlannedArrivalTime": "2024-12-16T15:10:00.0000000+01:00",
+                    "estimatedArrivalTime": "2024-12-16T15:11:00.0000000+01:00",
+                    "estimatedDurationInMinutes": 14,
+                    "estimatedOtherwisePlannedArrivalTime": "2024-12-16T15:11:00.0000000+01:00",
                     "estimatedOtherwisePlannedDepartureTime": "2024-12-16T14:57:00.0000000+01:00",
                     "journeyLegIndex": 2
                 }
@@ -4734,8 +4734,8 @@
         }
     ],
     "links": {
-        "previous": "journeys?originLatitude=57.714406&originLongitude=12.039585&destinationLatitude=57.69&destinationLongitude=11.972957&transportModes=walk&transportModes=bike&transportModes=bus&transportModes=tram&transportModes=train&totalBike=1,0,20000&dateTime=2024-12-16T13%3A33%3A58.0000000%2B00%3A00&paginationReference=M3xPQnxNVMK1MTTCtTkwMTU1wrU5MDE1NcK1OTAxODbCtTkwMTg2wrUwwrUwwrU4NcK1OTAxNTPCtTHCtTDCtTLCtTDCtTDCtS0yMTQ3NDgzNjQ4wrUxwrUyfFBESMK1OWZkZGYwODcyYzc4YzA4NTMxZGIxNWQzMzkwYzdkNDl8UkTCtTE2MTIyMDI0fFJUwrUxNDMzNTh8VVPCtTB8UlPCtUlOSVQ",
-        "next": "journeys?originLatitude=57.714406&originLongitude=12.039585&destinationLatitude=57.69&destinationLongitude=11.972957&transportModes=walk&transportModes=bike&transportModes=bus&transportModes=tram&transportModes=train&totalBike=1,0,20000&dateTime=2024-12-16T13%3A33%3A58.0000000%2B00%3A00&paginationReference=M3xPRnxNVMK1MTTCtTkwMjA1wrU5MDIwNcK1OTAyMznCtTkwMjM5wrUwwrUwwrU4NcK1OTAxOTbCtTbCtTDCtTLCtTDCtTDCtS0yMTQ3NDgzNjQ4wrUxwrUyfFBESMK1OWZkZGYwODcyYzc4YzA4NTMxZGIxNWQzMzkwYzdkNDl8UkTCtTE2MTIyMDI0fFJUwrUxNDMzNTh8VVPCtTB8UlPCtUlOSVQ",
-        "current": "journeys?originLatitude=57.714406&originLongitude=12.039585&destinationLatitude=57.69&destinationLongitude=11.972957&transportModes=walk&transportModes=bike&transportModes=bus&transportModes=tram&transportModes=train&totalBike=1,0,20000&dateTime=2024-12-16T13%3A33%3A58.0000000%2B00%3A00"
+        "previous": "journeys?originLatitude=57.714406&originLongitude=12.039585&destinationLatitude=57.69&destinationLongitude=11.972957&transportModes=walk&transportModes=bike&transportModes=bus&transportModes=tram&transportModes=train&totalBike=1,0,20000&dateTime=2024-12-16T13%3A35%3A10.0000000%2B00%3A00&paginationReference=M3xPQnxNVMK1MTTCtTkwMTU1wrU5MDE1NcK1OTAxODbCtTkwMTg2wrUwwrUwwrU4NcK1OTAxNTXCtTHCtTDCtTLCtTDCtTDCtS0yMTQ3NDgzNjQ4wrUxwrUyfFBESMK1OWZkZGYwODcyYzc4YzA4NTMxZGIxNWQzMzkwYzdkNDl8UkTCtTE2MTIyMDI0fFJUwrUxNDM1MTB8VVPCtTB8UlPCtUlOSVQ",
+        "next": "journeys?originLatitude=57.714406&originLongitude=12.039585&destinationLatitude=57.69&destinationLongitude=11.972957&transportModes=walk&transportModes=bike&transportModes=bus&transportModes=tram&transportModes=train&totalBike=1,0,20000&dateTime=2024-12-16T13%3A35%3A10.0000000%2B00%3A00&paginationReference=M3xPRnxNVMK1MTTCtTkwMjA1wrU5MDIwNcK1OTAyMznCtTkwMjM5wrUwwrUwwrU4NcK1OTAxOTbCtTbCtTDCtTLCtTDCtTDCtS0yMTQ3NDgzNjQ4wrUxwrUyfFBESMK1OWZkZGYwODcyYzc4YzA4NTMxZGIxNWQzMzkwYzdkNDl8UkTCtTE2MTIyMDI0fFJUwrUxNDM1MTB8VVPCtTB8UlPCtUlOSVQ",
+        "current": "journeys?originLatitude=57.714406&originLongitude=12.039585&destinationLatitude=57.69&destinationLongitude=11.972957&transportModes=walk&transportModes=bike&transportModes=bus&transportModes=tram&transportModes=train&totalBike=1,0,20000&dateTime=2024-12-16T13%3A35%3A10.0000000%2B00%3A00"
     }
 }
