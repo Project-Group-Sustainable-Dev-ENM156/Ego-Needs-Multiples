@@ -16,10 +16,10 @@ const p = {
 };
 
 const units = {
-  emissions: " g ",
-  price: " kr ",
-  time: " min ",
-  rating: "% "
+  emissions: " g‎ ",
+  price: " kr‎ ",
+  time: " min‎ ",
+  rating: "%‎ "
 };
 
 var startingPoint;
@@ -120,6 +120,8 @@ async function createTable(json_data) {
             const unit = units[elem] || "";
             cell.textContent = value[elem] + unit; // Use the value of the property
             cell.style.textAlign = "right";
+            cell.style.paddingRight = "3px";
+            cell.style.paddingLeft = "3px";
             cell.setAttribute("id", key + "_" + elem); // Set an ID for the cell
             cell.setAttribute("class", elem); // Set a class for the cell
             row.appendChild(cell);
