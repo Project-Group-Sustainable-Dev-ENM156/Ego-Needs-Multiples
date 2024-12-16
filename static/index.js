@@ -118,7 +118,7 @@ async function createTable(json_data) {
           
             const cell = document.createElement("td");
             const unit = units[elem] || "";
-            cell.textContent = value[elem] + unit; // Use the value of the property
+            cell.textContent = Math.round(value[elem]) + unit; // Use the value of the property
             cell.style.textAlign = "right";
             cell.style.paddingRight = "3px";
             cell.style.paddingLeft = "3px";
@@ -273,51 +273,39 @@ function getTime(transportationMethod, time_data, distance){
     const avg_public_transport_speed = 9 * 16.67
     const avg_driving_speed = 25 * 16.67
 
-    const minimum_bicycle_time = 2  // Time for walking to the bike, unlocking, parking and locking.
-    const minimum_car_time = 2      // Time for walking to the car, unlocking, sitting, parking, locking.
-
-    let time = 0
-
     switch (transportationMethod) {
         case "ICE_car":
         case "electric_car":
-            time += minimum_car_time
             if(time_data["car"] != "notSet"){
-                time += Math.round(parseFloat(time_data["car"]))
+                return Math.round(parseFloat(time_data["car"]))
             }
             else if(distance != undefined){
-                time += Math.round(distance/avg_driving_speed)
+                return Math.round(distance/avg_driving_speed)
             }
-            break
         case "public_transport":
             if(time_data["public_transport"] != "notSet"){
-                time += Math.round(parseFloat(time_data["public_transport"]))
+                return Math.round(parseFloat(time_data["public_transport"]))
             }
             else if(distance != undefined){
-                time += Math.round(distance/avg_public_transport_speed)
+                return Math.round(distance/avg_public_transport_speed)
             }
-            break
         case "bicycle":
-            time += minimum_bicycle_time
             if(time_data["bicycle"] != "notSet"){
-                time += Math.round(parseFloat(time_data["bicycle"]))
+                return Math.round(parseFloat(time_data["bicycle"]))
             }
             else if(distance != undefined){
-                time += Math.round(distance/avg_biking_speed)
+                return Math.round(distance/avg_biking_speed)
             }
-            break
         case "on_foot":
             if(time_data["walk"] != "notSet"){
-                time += Math.round(parseFloat(time_data["walk"]))
+                return Math.round(parseFloat(time_data["walk"]))
             }
             else if(distance != undefined){
-                time += Math.round(distance/avg_walking_speed)
+                return Math.round(distance/avg_walking_speed)
             }
-            break
         default:
             throw new Error(`Invalid transportation method: ${transportationMethod}`);
     }
-    return time
 }
 
 // ONLY ELECTRICIANS MAY ENTER!
