@@ -2,7 +2,7 @@
 article{
   margin: 80px auto 80px auto;
   width: 860px;
-  background-color: #FFFFFF;
+  background-color: var(--background-color);
   border: 1px solid #413956;
   box-shadow: 10px 10px 0px 4px rgba(65, 57, 86, 0.8);
 }
@@ -20,11 +20,11 @@ article{
     align-items:center;
 }
 .box {
-  background-color: #FFFFFF;
+  background-color: var(--background-color);
 }
 .container {
   width: 668px;
-  background-color: #FFFFFF;
+  background-color: var(--background-color);
   margin: 0 auto;
   margin-bottom: 80px;
 }
@@ -34,8 +34,8 @@ article{
 
 /* Largest Header. */
 h1 {
-  background-color: #413956;
-  color: #FFFFFF;
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
   display: inline-block;
   font-family: league gothic,sans-serif;
   font-size: 32px;
@@ -59,13 +59,13 @@ h1 {
   margin: 0;
   margin-top: 24px;
   height: 22px;
-  color: #413956;
+  color: var(--text-color);
 }
 
 .sm-subtitle {
   font-family: ibm plex sans condensed,noto display light,sans-serif;
   font-size: 16px;
-  color: #413956;
+  color: var(--text-color);
 }
 
 /* Input box where the end point or start point is inputted. */
@@ -80,8 +80,8 @@ h1 {
   font-size: 16px;
   line-height: 1;
   text-transform: uppercase;
-  background-color:#FFFFFF;
-  color: #413956;
+  background-color: var(--background-color);
+  color: var(--text-color);
   border-radius: 32px;
 }
 .input-text:hover {
@@ -102,27 +102,26 @@ h1 {
   font-size: 18px;
   font-weight: bold;
   line-height: 1;
-  background-color: #F25757;
-  color: #F4EDED;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
   text-transform: uppercase;
   border-radius: 8px;
 }
 .search-button:hover {
-  background-color: #AD002D;
+  background-color: var(--button-background-color);
   transition: 0.2s;
 }
 .search-button:active {
-  background-color: #740A00;
+  background-color: var(--button-background-color);
   transition: 0.2s;
 }
-
 
 /* Checkbox */
 .passenger-checkbox {
   width: 35px;
   height: 35px;
   border: 0.5px solid #ccc;
-  accent-color: #F25757;
+  accent-color: var(--button-background-color);
 }
 
 .hidden {
@@ -132,7 +131,7 @@ h1 {
 aside {
     box-shadow: 10px 10px 0px 4px rgba(65, 57, 86, 0.8);
     margin-left:900px;
-    background-color: #FFFFFF;
+    background-color: var(--background-color);
     margin-right:auto;
     margin-bottom:auto;
     margin-top:auto;
@@ -145,8 +144,6 @@ aside {
     display:block;
     border-radius: 4px;
 }
-
-
 
 /* Style for the range input */
 input[type="range"] {
@@ -164,7 +161,7 @@ input[type="range"] {
 
 /* Track styling */
 input[type="range"]::-webkit-slider-runnable-track {
-  background: #F25757;
+  background: var(--button-background-color);
   border-radius: 16px;
   width: 24px;
   writing-mode: vertical-lr
@@ -178,10 +175,10 @@ input[type="range"]::-moz-range-track {
 
 input[type="range"]::-ms-track {
   width: 100%;
-  background: #F25757;
-  border-color: #F25757;
+  background: var(--button-background-color);
+  border-color: var(--button-background-color);
   border-width: 12px 0;
-  color: #F25757;
+  color: var(--button-background-color);
 }
 
 /* Thumb styling */
@@ -191,7 +188,7 @@ input[type="range"]::-webkit-slider-thumb {
   width: 48px; /* Thumb width */
   height: 48px; /* Thumb height */
   background: #FFF; /* Thumb color */
-  border: 14px solid #F25757;
+  border: 14px solid var(--button-background-color);
   border-radius: 50%; /* Circular thumb */
   cursor: pointer;
 }
@@ -201,20 +198,18 @@ input[type="range"]::-moz-range-thumb {
   height: 18px;
   background: #FFFFFF;
   border-radius: 50%;
-  border: 10px solid #F25757;
+  border: 10px solid var(--button-background-color);
   cursor: pointer;
 }
 
 input[type="range"]::-moz-range-thumb:hover {
-  border: 10px solid #AD002D;
+  border: 10px solid var(--button-background-color);
   transition: 0.2s;
 }
 input[type="range"]::-moz-range-thumb:active {
-  border: 10px solid #740A00;
+  border: 10px solid var(--button-background-color);
   transition: 0.2s;
 }
-
-
 
 input[type="range"]::-ms-thumb {
   width: 16px;
@@ -226,11 +221,10 @@ input[type="range"]::-ms-thumb {
 
 /* Progress bar styling for Firefox */
 input[type="range"]::-moz-range-progress {
-  background-color: #F25757;
+  background-color: var(--button-background-color);
   width: 16px;
   border-radius: 8px;
 }
-
 
 img {
    margin-top: 8px;
@@ -246,7 +240,7 @@ th, td {
   border: 1px solid;
   border: 1.5px solid #ccc;
   text-align: center; 
-  color: #413956;
+  color: var(--text-color);
   font-family: ibm plex sans condensed,noto display light,sans-serif;
 }
 
@@ -270,7 +264,7 @@ table {
   font-family: ibm plex sans condensed,noto display light,sans-serif;
   font-size: 16px;
   text-transform: uppercase;
-  color: #413956;
+  color: var(--text-color);
 }
 
 .box-text-line {
@@ -279,7 +273,7 @@ table {
   font-family: ibm plex sans condensed,noto display light,sans-serif;
   font-size: 16px;
   text-transform: uppercase;
-  color: #413956;
+  color: var(--text-color);
 }
 
 .small-field {
@@ -299,5 +293,24 @@ table {
   font-family: ibm plex sans condensed,noto display light,sans-serif;
   font-size: 16px;
   text-transform: uppercase;
-  color: #413956;
+  color: var(--text-color);
+}
+
+/* Theme variables */
+:root {
+  --background-color: #FFFFFF;
+  --text-color: #413956;
+  --header-background-color: #413956;
+  --header-text-color: #FFFFFF;
+  --button-background-color: #F25757;
+  --button-text-color: #F4EDED;
+}
+
+body.dark-mode {
+  --background-color: #1E1E1E;
+  --text-color: #EAEAEA;
+  --header-background-color: #3E3E3E;
+  --header-text-color: #EAEAEA;
+  --button-background-color: #BB86FC;
+  --button-text-color: #121212;
 }

@@ -255,6 +255,33 @@ async function getPrice(transportationMethod, distance, passengers) {
     }
 }
 
+function initializeDarkModeToggle(toggleId) {
+    // Select the dark mode toggle element
+    const darkModeToggle = document.getElementById(toggleId);
+
+    // Check for previously saved user preference
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+        darkModeToggle.checked = true;
+    }
+
+    // Event listener to toggle dark mode
+    darkModeToggle.addEventListener('change', () => {
+        if (darkModeToggle.checked) {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initializeDarkModeToggle('dark-mode-toggle');
+});
+
+
 function getTime(transportationMethod, time_data, distance){
     const avg_walking_speed = 4.75 * 16.67 // [m/min]. Source for all: https://tekniskhandbok.goteborg.se/Arkiv/2019-1/wp-content/uploads/1E_9_Hastighet_2018-10.pdf
     const avg_biking_speed = 16 * 16.67   // * 16.67 to convert km/h into m/min
