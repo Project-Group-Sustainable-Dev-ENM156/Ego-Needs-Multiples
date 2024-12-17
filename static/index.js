@@ -19,7 +19,7 @@ const units = {
   emissions: " g‎ ",
   price: " kr‎ ",
   time: " min‎ ",
-  rating: "%‎ "
+  rating: "/10‎ "
 };
 
 var startingPoint;
@@ -158,11 +158,13 @@ function rate(data) {
             max_rating = data[key].rating;
         }
       });
-    // Normalize rating to 0-100
+    // Normalize rating to 1-10
     Object.keys(data).forEach(key => {
-        // data[key].rating = Math.random() * 100;
-        data[key].rating = 100 * data[key].rating / max_rating;
-        console.log(data[key].rating);
+        data[key].rating = Math.floor(10 * data[key].rating / max_rating);
+        if (data[key].rating < 1) {
+            data[key].rating = 1;
+        }
+        // console.log(data[key].rating);
     });
       
 }
